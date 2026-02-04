@@ -59,10 +59,11 @@
 
                     <!-- 로고 -->
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="240dp"
+                        android:layout_height="48dp"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/group_32" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/view" />
 
                     <!-- 문구 -->
                     <com.kyad.traystorage.app.common.font.FontTextView

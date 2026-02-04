@@ -71,10 +71,11 @@
 
                     <ImageView
                         android:id="@+id/title_image"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="160dp"
+                        android:layout_height="32dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/logo_texttype" />
+                        android:scaleType="fitStart"
+                        android:src="@drawable/view" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -268,21 +269,15 @@
                 android:gravity="center_horizontal"
                 android:visibility="@{activity.showType == 1 ? View.GONE : View.VISIBLE}">
 
-                <FrameLayout
+                <ImageView
                     android:id="@+id/btn_chatbot"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:layout_marginBottom="12dp"
-                    android:background="@drawable/bg_fab_chatbot"
                     android:elevation="6dp"
-                    android:onClick="@{()->activity.onChatbotClick()}">
-
-                    <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_chatbot" />
-                </FrameLayout>
+                    android:onClick="@{()->activity.onChatbotClick()}"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ai" />
 
                 <ImageView
                     android:id="@+id/btn_add"

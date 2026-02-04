@@ -14,11 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- 배경 그라데이션 -->
-        <View
+        <!-- 배경 이미지 -->
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_login_home_gradient" />
+            android:src="@drawable/login"
+            android:scaleType="fitXY" />
 
         <!-- Android Status Bar -->
         <include
@@ -41,10 +42,11 @@
 
             <!-- 로고 -->
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="48dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/group_32" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/view" />
 
             <!-- 문구 -->
             <com.kyad.traystorage.app.common.font.FontTextView
@@ -69,6 +71,21 @@
             android:layout_marginBottom="48dp"
             android:orientation="vertical"
             android:paddingHorizontal="32dp">
+
+            <!-- 테스트 모드 버튼 -->
+            <com.kyad.traystorage.app.common.font.FontButton
+                android:id="@+id/btn_test_mode"
+                style="@style/font_notosans_kr_bold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:text="테스트 모드"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="@drawable/bg_btn_test_mode"
+                android:gravity="center"
+                android:onClick="@{()->activity.goTestMode()}"
+                android:includeFontPadding="false" />
 
             <!-- 로그인 버튼 -->
             <com.kyad.traystorage.app.common.font.FontButton
