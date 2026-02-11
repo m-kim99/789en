@@ -2,15 +2,12 @@ package com.kyad.traystorage.app.main;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.inputmethod.EditorInfo;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,16 +32,12 @@ import com.kyad.traystorage.databinding.ItemDocumentBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.view.animation.AccelerateDecelerateInterpolator;
 
 import base.BaseBindingActivity;
 import helper.RecyclerViewHelper;
 import io.reactivex.disposables.CompositeDisposable;
 import org.greenrobot.eventbus.EventBus;
 import base.BaseEvent;
-import com.kyad.traystorage.app.chatbot.ChatbotFragment;
 
 public class CategoryDocumentsActivity extends BaseBindingActivity<ActivityCategoryDocumentsBinding> {
 
@@ -56,9 +49,6 @@ public class CategoryDocumentsActivity extends BaseBindingActivity<ActivityCateg
     private String lastSearchKey = "";
     private int currentCount = 0;
     private CompositeDisposable disposables = new CompositeDisposable();
-    private ChatbotFragment chatbotFragment;
-    private boolean isChatbotVisible = false;
-    private ViewTreeObserver.OnGlobalLayoutListener chatbotKeyboardListener;
 
     @Override
     public int getLayout() {
@@ -213,117 +203,7 @@ public class CategoryDocumentsActivity extends BaseBindingActivity<ActivityCateg
 
     @Override
     public void onBackPressed() {
-        if (isChatbotVisible) {
-            hideChatbot();
-            return;
-        }
         super.onBackPressed();
-    }
-
-    /*
-     * Chatbot
-     */
-    public void onChatbotClick() {
-        if (isChatbotVisible) {
-            hideChatbot();
-        } else {
-            showChatbot();
-        }
-    }
-
-    private void showChatbot() {
-        if (chatbotFragment == null) {
-            chatbotFragment = new ChatbotFragment();
-            chatbotFragment.setOnCloseListener(() -> hideChatbot());
-        }
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.chatbot_container, chatbotFragment)
-                .commit();
-
-        binding.chatbotContainer.setVisibility(View.VISIBLE);
-        binding.chatbotContainer.setTranslationY(binding.chatbotContainer.getHeight() > 0 ? binding.chatbotContainer.getHeight() : 600);
-        binding.chatbotContainer.animate()
-                .translationY(0)
-                .setDuration(300)
-                .setInterpolator(new AccelerateDecelerateInterpolator())
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        isChatbotVisible = true;
-                        setupChatbotKeyboardListener();
-                    }
-                })
-                .start();
-
-        binding.fabContainer.setVisibility(View.GONE);
-    }
-
-    private void setupChatbotKeyboardListener() {
-        if (chatbotKeyboardListener != null) {
-            binding.getRoot().getViewTreeObserver().removeOnGlobalLayoutListener(chatbotKeyboardListener);
-        }
-        
-        chatbotKeyboardListener = new ViewTreeObserver.OnGlobalLayoutListener() {
-            private boolean isKeyboardVisible = false;
-            
-            @Override
-            public void onGlobalLayout() {
-                if (binding == null || !isChatbotVisible) return;
-                
-                Rect r = new Rect();
-                binding.getRoot().getWindowVisibleDisplayFrame(r);
-                int screenHeight = binding.getRoot().getRootView().getHeight();
-                int keypadHeight = screenHeight - r.bottom;
-                
-                boolean keyboardNowVisible = keypadHeight > screenHeight * 0.15;
-                
-                if (keyboardNowVisible != isKeyboardVisible) {
-                    isKeyboardVisible = keyboardNowVisible;
-                    
-                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) binding.chatbotContainer.getLayoutParams();
-                    
-                    if (isKeyboardVisible) {
-                        params.bottomMargin = 0;
-                        params.topMargin = (int) (70 * getResources().getDisplayMetrics().density);
-                        params.height = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    } else {
-                        params.bottomMargin = 0;
-                        params.topMargin = 0;
-                        params.height = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    }
-                    binding.chatbotContainer.setLayoutParams(params);
-                }
-            }
-        };
-        binding.getRoot().getViewTreeObserver().addOnGlobalLayoutListener(chatbotKeyboardListener);
-    }
-
-    private void hideChatbot() {
-        if (chatbotKeyboardListener != null) {
-            binding.getRoot().getViewTreeObserver().removeOnGlobalLayoutListener(chatbotKeyboardListener);
-            chatbotKeyboardListener = null;
-        }
-        
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) binding.chatbotContainer.getLayoutParams();
-        params.bottomMargin = 0;
-        params.topMargin = 0;
-        binding.chatbotContainer.setLayoutParams(params);
-        
-        binding.chatbotContainer.animate()
-                .translationY(binding.chatbotContainer.getHeight())
-                .setDuration(300)
-                .setInterpolator(new AccelerateDecelerateInterpolator())
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        binding.chatbotContainer.setVisibility(View.GONE);
-                        isChatbotVisible = false;
-                        binding.fabContainer.setVisibility(View.VISIBLE);
-                    }
-                })
-                .start();
     }
 
     public class DocumentListAdapter extends RecyclerView.Adapter<DocumentListAdapter.ListItemViewHolder> {

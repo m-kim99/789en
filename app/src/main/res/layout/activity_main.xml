@@ -270,30 +270,12 @@
                 android:visibility="@{activity.showType == 1 ? View.GONE : View.VISIBLE}">
 
                 <ImageView
-                    android:id="@+id/btn_chatbot"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_marginBottom="12dp"
-                    android:elevation="6dp"
-                    android:onClick="@{()->activity.onChatbotClick()}"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ai" />
-
-                <ImageView
                     android:id="@+id/btn_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="@{()->activity.onAddDocumentClick()}"
                     android:src="@drawable/icon_c_writing_56" />
             </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/chatbot_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:visibility="gone"
-                android:elevation="24dp" />
 
         </RelativeLayout>
 

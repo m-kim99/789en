@@ -56,6 +56,8 @@ public class SplashActivity extends BaseBindingActivity<ActivitySplashBinding> {
         // 로고 아이콘 1초 표시
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             // 로고+BETA로 변경
+            binding.imgLogo.setScaleX(0.8f);
+            binding.imgLogo.setScaleY(0.8f);
             binding.imgLogo.setImageResource(R.drawable.img_intro_logo_text);
             
             // 1초 더 표시 후 다음 화면
