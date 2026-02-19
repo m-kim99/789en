@@ -50,7 +50,7 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="@{()->activity.onDeleteClick()}"
                 android:padding="15dp"
-                android:src="@drawable/icon_gnb_delete"
+                android:src="@drawable/ic_trash"
                 android:visibility="@{activity.isMine?View.VISIBLE:View.GONE}" />
 
         </RelativeLayout>

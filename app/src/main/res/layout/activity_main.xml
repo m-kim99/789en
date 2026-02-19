@@ -71,8 +71,8 @@
 
                     <ImageView
                         android:id="@+id/title_image"
-                        android:layout_width="160dp"
-                        android:layout_height="32dp"
+                        android:layout_width="208dp"
+                        android:layout_height="42dp"
                         android:layout_centerVertical="true"
                         android:scaleType="fitStart"
                         android:src="@drawable/view" />
