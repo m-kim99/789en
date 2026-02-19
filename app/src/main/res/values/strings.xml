@@ -267,9 +267,14 @@
     <string name="login_token_error">인증기간이 만료되었습니다. 재로그인 해주세요.</string>
     <string name="empty_nfc_tag">본 NFC태그는\n빈 태그입니다.</string>
     <string name="go_main_page">메인 화면으로</string>
-    <string name="setting_bottom">© 2024 thinkstep\n
+    <string name="setting_bottom"> 2024 thinkstep\n
         <br/>All rights reserved.
     </string>
 
+    <string-array name="sort_options">
+        <item>최신순</item>
+        <item>과거순</item>
+        <item>가나다순</item>
+    </string-array>
 
 </resources>

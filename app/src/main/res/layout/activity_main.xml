@@ -200,7 +200,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
 
                         <com.kyad.traystorage.app.common.font.FontTextView
                             android:id="@+id/doc_tittle"
@@ -214,12 +215,20 @@
                         <com.kyad.traystorage.app.common.font.FontTextView
                             android:id="@+id/doc_count"
                             style="@style/font_spoqahansansneo_bold"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:layout_marginLeft="5dp"
                             android:text="0개"
                             android:textColor="@color/black"
                             android:textSize="15dp" />
+
+                        <Spinner
+                            android:id="@+id/sort_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="100dp"
+                            android:spinnerMode="dropdown" />
                     </LinearLayout>
 
                     <View

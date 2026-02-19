@@ -50,7 +50,10 @@ import com.kyad.traystorage.app.Constants;
 import com.kyad.traystorage.data.remote.ResponseSubscriber;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 
 
 import base.BaseBindingActivity;
@@ -67,6 +70,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     private List<ModelDocument> allList = new ArrayList<>();
     private int currentCount = 0;
     private CompositeDisposable disposables = new CompositeDisposable();
+    private int currentSortType = 0;
 
     @Override
     public int getLayout() {
@@ -158,6 +162,8 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         binding.docCount.setText("0건");
         docListAdapter = new DocumentListAdapter();
         binding.docList.setAdapter(docListAdapter);
+        
+        setupSortSpinner();
 
         binding.docList.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -277,6 +283,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
                             for (ModelDocument doc : allList) {
                                 doc.updateValues();
                             }
+                            sortDocuments();
                             updateCurrentList();
                             updateUI();
                         } else if (!getResponse().msg.isEmpty()) {
@@ -292,6 +299,51 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
                         Utils.showCustomToast(MainActivity.this, R.string.error_network_content);
                     }
                 }));
+    }
+
+    private void setupSortSpinner() {
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.sort_options, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.sortSpinner.setAdapter(adapter);
+        binding.sortSpinner.setSelection(0);
+        
+        binding.sortSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (currentSortType != position) {
+                    currentSortType = position;
+                    sortDocuments();
+                    currentCount = 0;
+                    documentList.clear();
+                    updateCurrentList();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+    }
+    
+    private void sortDocuments() {
+        switch (currentSortType) {
+            case 0:
+                Collections.reverse(allList);
+                break;
+            case 1:
+                Collections.sort(allList, (a, b) -> {
+                    if (a.create_time == null || b.create_time == null) return 0;
+                    return a.create_time.compareTo(b.create_time);
+                });
+                break;
+            case 2:
+                Collections.sort(allList, (a, b) -> {
+                    if (a.title == null || b.title == null) return 0;
+                    return a.title.compareTo(b.title);
+                });
+                break;
+        }
     }
 
     private void updateCurrentList() {
