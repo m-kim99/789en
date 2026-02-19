@@ -171,7 +171,7 @@
     <string name="withdrawal3">탈퇴 신청 날짜 :</string>
     <string name="withdrawal4">14일 이내 재로그인 시 <font color="#1c329b"><u>탈퇴회원복구</u></font> 절차를 진행 하실 수 있습니다. </string>
     <string name="invite">초대하기</string>
-    <string name="invite1">Traystorage가\n필요한 친구들에게\n초대메시지를 보내보세요</string>
+    <string name="invite1">TrayStorage가\n필요한 친구들에게\n초대메시지를 보내보세요</string>
     <string name="invite_btn">친구 초대하기</string>
     <string name="profile_management">프로필 관리</string>
     <string name="main_info">기본정보</string>
@@ -267,7 +267,7 @@
     <string name="login_token_error">인증기간이 만료되었습니다. 재로그인 해주세요.</string>
     <string name="empty_nfc_tag">본 NFC태그는\n빈 태그입니다.</string>
     <string name="go_main_page">메인 화면으로</string>
-    <string name="setting_bottom"> 2024 thinkstep\n
+    <string name="setting_bottom"> thinkstep\n
         <br/>All rights reserved.
     </string>
 

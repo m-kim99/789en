@@ -469,7 +469,7 @@
                 android:layout_marginBottom="24dp"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="ⓒ 2025 TrayStorage.\nAll right reserved."
+                android:text="ⓒ TrayStorage.\nAll right reserved."
                 android:textColor="#8D8E90"
                 android:textSize="14sp" />
 

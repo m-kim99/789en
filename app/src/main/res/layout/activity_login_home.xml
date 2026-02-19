@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/login"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop" />
 
         <!-- Android Status Bar -->
         <include
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="24dp"
             android:orientation="vertical"
             android:paddingHorizontal="32dp">
 
