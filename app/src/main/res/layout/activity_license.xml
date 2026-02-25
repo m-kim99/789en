@@ -43,6 +43,11 @@
 
         </RelativeLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0" />
+
         <WebView
             android:id="@+id/web_view"
             android:layout_width="match_parent"
