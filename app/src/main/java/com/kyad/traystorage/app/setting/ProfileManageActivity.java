@@ -99,6 +99,13 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
         public MutableLiveData<Integer> gender = new MutableLiveData<>(0);
 
         public void uploadImage(String fname){
+            // 테스트 모드일 경우 로컬 파일 경로 그대로 사용
+            if (DataManager.get().isTestMode()) {
+                profile_image.setValue(fname);
+                updateProfile();
+                return;
+            }
+
             addDisposable(DataManager.get().uploadImages(new String[]{fname}).subscribeWith(new ResponseSubscriber<List<ModelUploadFile>>() {
                 @Override
                 public void onComplete() {
@@ -116,6 +123,21 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
             }));
         }
         public void updateProfile() {
+            // 테스트 모드일 경우 로컬에만 저장
+            if (DataManager.get().isTestMode()) {
+                ModelUser oldUser = DataManager.get().getModel(ModelUser.class);
+                oldUser.name = name.getValue();
+                oldUser.email = email.getValue();
+                oldUser.birthday = birthday.getValue().replace(".", "-");
+                oldUser.gender = gender.getValue();
+                oldUser.profile_image = profile_image.getValue();
+                DataManager.get().setModel(oldUser);
+
+                Glide.with(binding.imgAvatar).load(oldUser.profile_image).placeholder(R.drawable.icon_c_user_60).into(binding.imgAvatar);
+                Utils.showCustomToast(ProfileManageActivity.this, R.string.profile_save_ok);
+                return;
+            }
+
             addDisposable(DataManager.get().updateProfile(
                     name.getValue(), birthday.getValue().replace(".","-"), gender.getValue(), email.getValue(), profile_image.getValue()).subscribeWith(new ResponseSubscriber<ModelUser>() {
                 @Override

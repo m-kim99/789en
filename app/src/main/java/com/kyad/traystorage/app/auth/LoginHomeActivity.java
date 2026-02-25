@@ -88,6 +88,9 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
         testUser.email = "test@test.com";
         testUser.isAutoLogin = false;
         testUser.is_agree = 1;
+        testUser.birthday = "1990-01-01";
+        testUser.profile_image = "";
+        testUser.gender = 0;
         
         // 더미 유저 저장
         DataManager.get().setModel(testUser);
