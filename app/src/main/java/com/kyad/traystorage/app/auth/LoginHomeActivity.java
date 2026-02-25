@@ -91,6 +91,8 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
         testUser.birthday = "1990-01-01";
         testUser.profile_image = "";
         testUser.gender = 0;
+        testUser.signup_type = 0;
+        testUser.status = 0;
         
         // 더미 유저 저장
         DataManager.get().setModel(testUser);

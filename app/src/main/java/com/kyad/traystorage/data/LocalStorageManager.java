@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kyad.traystorage.App;
+import com.kyad.traystorage.data.model.ModelAgreement;
 import com.kyad.traystorage.data.model.ModelAsk;
 import com.kyad.traystorage.data.model.ModelCategory;
 import com.kyad.traystorage.data.model.ModelDocument;
@@ -457,5 +458,59 @@ public class LocalStorageManager {
             asks.add(ask);
             saveAsks(asks);
         }
+    }
+
+    // ==================== Agreements (약관) ====================
+
+    public List<ModelAgreement> getAgreeList() {
+        List<ModelAgreement> list = new ArrayList<>();
+        
+        // 테스트용 약관 목록
+        ModelAgreement agree1 = new ModelAgreement();
+        agree1.id = 1;
+        agree1.title = "서비스 이용약관";
+        agree1.status = 1;
+        list.add(agree1);
+        
+        ModelAgreement agree2 = new ModelAgreement();
+        agree2.id = 2;
+        agree2.title = "개인정보 처리방침";
+        agree2.status = 1;
+        list.add(agree2);
+        
+        ModelAgreement agree3 = new ModelAgreement();
+        agree3.id = 3;
+        agree3.title = "위치기반 서비스 이용약관";
+        agree3.status = 1;
+        list.add(agree3);
+        
+        return list;
+    }
+
+    public ModelAgreement getAgreeDetail(Integer id) {
+        ModelAgreement agree = new ModelAgreement();
+        agree.id = id;
+        
+        switch (id) {
+            case 1:
+                agree.title = "서비스 이용약관";
+                agree.content = "<h2>서비스 이용약관</h2><p>테스트 모드용 서비스 이용약관입니다.</p><p>본 약관은 TrayStorage 앱의 테스트 기능 확인을 위한 샘플 데이터입니다.</p>";
+                break;
+            case 2:
+                agree.title = "개인정보 처리방침";
+                agree.content = "<h2>개인정보 처리방침</h2><p>테스트 모드용 개인정보 처리방침입니다.</p><p>본 방침은 TrayStorage 앱의 테스트 기능 확인을 위한 샘플 데이터입니다.</p>";
+                break;
+            case 3:
+                agree.title = "위치기반 서비스 이용약관";
+                agree.content = "<h2>위치기반 서비스 이용약관</h2><p>테스트 모드용 위치기반 서비스 이용약관입니다.</p><p>본 약관은 TrayStorage 앱의 테스트 기능 확인을 위한 샘플 데이터입니다.</p>";
+                break;
+            default:
+                agree.title = "약관";
+                agree.content = "<p>테스트용 약관 내용입니다.</p>";
+                break;
+        }
+        agree.status = 1;
+        
+        return agree;
     }
 }

@@ -237,9 +237,29 @@ public class DataManager {
         return callApi(remote.agree_terms(getModel(ModelUser.class).access_token));
     }
     public Flowable<ApiResponse<ModelAgreement.ListModel>> getAgreeList(String accesstoken) {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelAgreement.ListModel> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                ModelAgreement.ListModel data = new ModelAgreement.ListModel();
+                data.list = LocalStorageManager.get().getAgreeList();
+                response.data = data;
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.get_agree_list(accesstoken));
     }
     public Flowable<ApiResponse<ModelAgreement>> getAgreeDetail(Integer id) {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelAgreement> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                response.data = LocalStorageManager.get().getAgreeDetail(id);
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.get_agree_detail(id));
     }
 
@@ -256,9 +276,27 @@ public class DataManager {
     }
 
     public Flowable<ApiResponse<ModelUser>> cancelExit(String login_id) {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelUser> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                response.data = getModel(ModelUser.class);
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.cancel_exit(login_id));
     }
     public Flowable<ApiResponse<ModelBase>> requestExit() {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelBase> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                response.data = new ModelBase();
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.request_exit(getModel(ModelUser.class).access_token));
     }
 
