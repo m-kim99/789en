@@ -47,6 +47,16 @@ public class VersionActivity extends BaseBindingActivity<ActivityVersionBinding>
         public ObservableField<String> newVersion = new ObservableField<String>();
         public ObservableBoolean isUpdate = new ObservableBoolean(false);
         public void getVersion() {
+            // 테스트 모드일 경우 테스트 버전 정보 사용
+            if (DataManager.get().isTestMode()) {
+                version = DataManager.get().getTestVersionInfo();
+                String currentVersion = Utils.getVersion(getApplicationContext());
+                oldVersion.set(currentVersion);
+                newVersion.set(version.version);
+                isUpdate.set(checkForUpdate(currentVersion, version.version));
+                return;
+            }
+            
             addDisposable(DataManager.get().getVersionInfo().subscribeWith(new ResponseSubscriber<ModelVersion>() {
                 @Override
                 public void onComplete() {

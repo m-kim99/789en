@@ -45,6 +45,13 @@ public class LoadingViewModel extends BaseViewModel {
     }
 
     public void getVersionInfo() {
+        // 테스트 모드일 경우 테스트 버전 정보 사용
+        if (DataManager.get().isTestMode()) {
+            ModelVersion version = DataManager.get().getTestVersionInfo();
+            apiListener.onGetVersionSuccess(version);
+            return;
+        }
+        
         addDisposable(DataManager.get().getVersionInfo().subscribeWith(new ResponseSubscriber<ModelVersion>() {
             @Override
             public void onComplete() {

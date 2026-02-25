@@ -221,6 +221,14 @@ public class DataManager {
     public Flowable<ApiResponse<ModelVersion>> getVersionInfo() {
         return callApi(remote.version_info(0));
     }
+    
+    public ModelVersion getTestVersionInfo() {
+        ModelVersion version = new ModelVersion();
+        version.version = "1.2";
+        version.require_update = 1;
+        version.store_url = "https://play.google.com/store";
+        return version;
+    }
 
     public Flowable<ApiResponse<ModelCode>> requestCodeForFind(String login_id, String phoneNumber) {
         return callApi(remote.request_code_for_find(login_id, phoneNumber));
