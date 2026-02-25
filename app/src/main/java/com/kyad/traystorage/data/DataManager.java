@@ -263,10 +263,31 @@ public class DataManager {
     }
 
     public Flowable<ApiResponse<ModelAsk.ListModel>> getAskList() {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelAsk.ListModel> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                ModelAsk.ListModel data = new ModelAsk.ListModel();
+                data.list = LocalStorageManager.get().getAskList();
+                response.data = data;
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.get_ask_list(getModel(ModelUser.class).access_token));
     }
 
     public Flowable<ApiResponse<ModelBase>> insertAsk(String title, String content) {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                LocalStorageManager.get().addAsk(title, content);
+                ApiResponse<ModelBase> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                response.data = new ModelBase();
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.insert_ask(getModel(ModelUser.class).access_token, title, content));
     }
 
@@ -277,9 +298,29 @@ public class DataManager {
         return callApi(remote.get_faq_list(getModel(ModelUser.class).access_token, itemid, 0));
     }
     public Flowable<ApiResponse<ModelNotice.ListModel>> getNoticeList() {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelNotice.ListModel> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                ModelNotice.ListModel data = new ModelNotice.ListModel();
+                data.list = LocalStorageManager.get().getNoticeList();
+                response.data = data;
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.get_notice_list(getModel(ModelUser.class).access_token, 0));
     }
     public Flowable<ApiResponse<ModelNoticeDetail>> getNoticeDetail(String id, int is_code) {
+        if (isTestMode()) {
+            return Flowable.fromCallable(() -> {
+                ApiResponse<ModelNoticeDetail> response = new ApiResponse<>();
+                response.result = 0;
+                response.msg = "";
+                response.data = LocalStorageManager.get().getNoticeDetail(Integer.parseInt(id));
+                return response;
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }
         return callApi(remote.get_notice_detail(getModel(ModelUser.class).access_token, id, is_code));
     }
 

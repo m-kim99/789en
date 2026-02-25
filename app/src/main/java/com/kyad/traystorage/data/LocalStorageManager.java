@@ -6,8 +6,11 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kyad.traystorage.App;
+import com.kyad.traystorage.data.model.ModelAsk;
 import com.kyad.traystorage.data.model.ModelCategory;
 import com.kyad.traystorage.data.model.ModelDocument;
+import com.kyad.traystorage.data.model.ModelNotice;
+import com.kyad.traystorage.data.model.ModelNoticeDetail;
 
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
@@ -24,8 +27,12 @@ public class LocalStorageManager {
     private static final String PREF_NAME = "test_mode_storage";
     private static final String KEY_CATEGORIES = "categories";
     private static final String KEY_DOCUMENTS = "documents";
+    private static final String KEY_NOTICES = "notices";
+    private static final String KEY_ASKS = "asks";
     private static final String KEY_CATEGORY_ID_SEQ = "category_id_seq";
     private static final String KEY_DOCUMENT_ID_SEQ = "document_id_seq";
+    private static final String KEY_NOTICE_ID_SEQ = "notice_id_seq";
+    private static final String KEY_ASK_ID_SEQ = "ask_id_seq";
 
     private static LocalStorageManager instance;
     private SharedPreferences prefs;
@@ -330,6 +337,125 @@ public class LocalStorageManager {
         List<ModelCategory> categories = getCategories();
         if (categories.isEmpty()) {
             insertCategory("기본", 0);
+        }
+        // 테스트용 공지사항 초기화
+        initDefaultNotice();
+        // 테스트용 문의내역 초기화
+        initDefaultAsk();
+    }
+
+    // ==================== Notices (공지사항) ====================
+
+    public List<ModelNotice> getNoticeList() {
+        String json = prefs.getString(KEY_NOTICES, null);
+        if (json == null) {
+            return new ArrayList<>();
+        }
+        Type type = new TypeToken<List<ModelNotice>>(){}.getType();
+        List<ModelNotice> notices = gson.fromJson(json, type);
+        return notices != null ? notices : new ArrayList<>();
+    }
+
+    public void saveNotices(List<ModelNotice> notices) {
+        String json = gson.toJson(notices);
+        prefs.edit().putString(KEY_NOTICES, json).apply();
+    }
+
+    public ModelNoticeDetail getNoticeDetail(int noticeId) {
+        List<ModelNotice> notices = getNoticeList();
+        for (ModelNotice notice : notices) {
+            if (notice.id == noticeId) {
+                ModelNoticeDetail detail = new ModelNoticeDetail();
+                detail.id = notice.id;
+                detail.title = notice.title;
+                detail.reg_time = notice.reg_time;
+                detail.view_count = notice.view_count + 1;
+                detail.content = "[테스트 공지사항]\n\n" +
+                        "안녕하세요, TrayStorage 테스트 모드입니다.\n\n" +
+                        "이 공지사항은 테스트 목적으로 생성된 샘플 데이터입니다.\n" +
+                        "실제 서비스에서는 서버에서 공지사항을 불러옵니다.\n\n" +
+                        "테스트 기능:\n" +
+                        "• 공지사항 목록 조회\n" +
+                        "• 공지사항 상세 조회\n" +
+                        "• 조회수 증가\n\n" +
+                        "감사합니다.";
+                
+                // 조회수 업데이트
+                notice.view_count++;
+                saveNotices(notices);
+                
+                return detail;
+            }
+        }
+        return null;
+    }
+
+    private void initDefaultNotice() {
+        List<ModelNotice> notices = getNoticeList();
+        if (notices.isEmpty()) {
+            int newId = prefs.getInt(KEY_NOTICE_ID_SEQ, 1);
+            prefs.edit().putInt(KEY_NOTICE_ID_SEQ, newId + 1).apply();
+
+            ModelNotice notice = new ModelNotice();
+            notice.id = newId;
+            notice.title = "[공지] TrayStorage 테스트 모드 안내";
+            notice.reg_time = getCurrentTime();
+            notice.view_count = 0;
+
+            notices.add(notice);
+            saveNotices(notices);
+        }
+    }
+
+    // ==================== Asks (문의내역) ====================
+
+    public List<ModelAsk> getAskList() {
+        String json = prefs.getString(KEY_ASKS, null);
+        if (json == null) {
+            return new ArrayList<>();
+        }
+        Type type = new TypeToken<List<ModelAsk>>(){}.getType();
+        List<ModelAsk> asks = gson.fromJson(json, type);
+        return asks != null ? asks : new ArrayList<>();
+    }
+
+    public void saveAsks(List<ModelAsk> asks) {
+        String json = gson.toJson(asks);
+        prefs.edit().putString(KEY_ASKS, json).apply();
+    }
+
+    public void addAsk(String title, String content) {
+        List<ModelAsk> asks = getAskList();
+
+        int newId = prefs.getInt(KEY_ASK_ID_SEQ, 1);
+        prefs.edit().putInt(KEY_ASK_ID_SEQ, newId + 1).apply();
+
+        ModelAsk ask = new ModelAsk();
+        ask.title = title;
+        ask.content = content;
+        ask.reply = "";
+        ask.status = 0; // 답변 대기
+        ask.reg_time = getCurrentTime();
+
+        asks.add(0, ask); // 최신 문의가 맨 위로
+        saveAsks(asks);
+    }
+
+    private void initDefaultAsk() {
+        List<ModelAsk> asks = getAskList();
+        if (asks.isEmpty()) {
+            int newId = prefs.getInt(KEY_ASK_ID_SEQ, 1);
+            prefs.edit().putInt(KEY_ASK_ID_SEQ, newId + 1).apply();
+
+            ModelAsk ask = new ModelAsk();
+            ask.title = "테스트 문의입니다";
+            ask.content = "이것은 테스트 모드에서 생성된 샘플 문의입니다.\n문의 기능이 정상 동작하는지 확인할 수 있습니다.";
+            ask.reply = "안녕하세요, 테스트 답변입니다.\n\n문의 주신 내용 확인했습니다.\n테스트 모드에서는 실제 서버 연동 없이 로컬에서 문의 기능을 테스트할 수 있습니다.\n\n감사합니다.";
+            ask.status = 1; // 답변 완료
+            ask.reg_time = getCurrentTime();
+
+            asks.add(ask);
+            saveAsks(asks);
         }
     }
 }
