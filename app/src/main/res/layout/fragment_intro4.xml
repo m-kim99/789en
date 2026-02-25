@@ -89,19 +89,37 @@
         android:scaleType="fitCenter"
         android:src="@drawable/img_intro_onboarding4" />
 
-    <!-- 시작하기 버튼 -->
-    <com.kyad.traystorage.app.common.font.FontButton
-        android:id="@+id/btn_start"
-        style="@style/font_notosans_kr_bold"
+    <!-- 하단 버튼 영역 -->
+    <LinearLayout
+        android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="60dp"
-        android:text="시작하기"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:background="@drawable/bg_btn_confirm_bottom"
-        android:gravity="center" />
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEDF0" />
+
+        <com.kyad.traystorage.app.common.font.FontButton
+            android:id="@+id/btn_start"
+            style="@style/font_notosans_kr_bold"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="12dp"
+            android:text="시작하기"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/bg_btn_confirm_bottom"
+            android:gravity="center" />
+
+        <!-- Android Navigation Bar 공간 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white" />
+    </LinearLayout>
 </RelativeLayout>
