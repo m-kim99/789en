@@ -86,11 +86,11 @@
                 <!-- NFC 이미지 -->
                 <ImageView
                     android:layout_width="240dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="40dp"
                     android:adjustViewBounds="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/img_nfc_150" />
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_nfc" />
 
                 <!-- 공간 확보 -->
                 <View
