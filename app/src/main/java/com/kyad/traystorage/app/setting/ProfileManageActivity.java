@@ -82,10 +82,8 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
         viewModel.birthday.setValue(oldUser.birthday.replace("-","."));
         viewModel.profile_image.setValue(oldUser.profile_image);
         viewModel.gender.setValue(oldUser.gender);
-        if(oldUser.gender == 0){
-            onSex1();
-        }else
-            onSex2();
+        // 초기화 시 성별 버튼 상태 설정 (평상시 스타일)
+        updateGenderButtons(oldUser.gender);
 
         Glide.with(binding.imgAvatar).load(oldUser.profile_image).placeholder(R.drawable.icon_c_user_60).into(binding.imgAvatar);
 
@@ -135,6 +133,8 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
 
                 Glide.with(binding.imgAvatar).load(oldUser.profile_image).placeholder(R.drawable.icon_c_user_60).into(binding.imgAvatar);
                 Utils.showCustomToast(ProfileManageActivity.this, R.string.profile_save_ok);
+                isEditable.set(false);
+                refreshGenderButtonStyle();
                 return;
             }
 
@@ -156,6 +156,8 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
                         Glide.with(binding.imgAvatar).load(user.profile_image).placeholder(R.drawable.icon_c_user_60).into(binding.imgAvatar);
 
                         Utils.showCustomToast(ProfileManageActivity.this, R.string.profile_save_ok);
+                        isEditable.set(false);
+                        refreshGenderButtonStyle();
                     } else if (!getResponse().msg.isEmpty()) {
                         onApiError(getResponse().msg);
                     } else {
@@ -182,23 +184,48 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
     }
     public void onClickEdit(){
         isEditable.set(true);
+        refreshGenderButtonStyle();
     }
     public void onDeleteName(){
         binding.editName.setText("");
     }
 
     public void onSex1(){
-        binding.buttonSex1.setSelected(true);binding.buttonSex1.setTextColor(getResources().getColor(R.color.focus_color));
-        binding.buttonSex2.setSelected(false);binding.buttonSex2.setTextColor(getResources().getColor(R.color.light_gray));
+        if (!isEditable.get()) return;
+        updateGenderButtons(0);
         viewModel.gender.setValue(0);
     }
     public void onSex2(){
-        binding.buttonSex1.setSelected(false);binding.buttonSex1.setTextColor(getResources().getColor(R.color.light_gray));
-        binding.buttonSex2.setSelected(true);binding.buttonSex2.setTextColor(getResources().getColor(R.color.focus_color));
+        if (!isEditable.get()) return;
+        updateGenderButtons(1);
         viewModel.gender.setValue(1);
+    }
+    public void onSex3(){
+        if (!isEditable.get()) return;
+        updateGenderButtons(2);
+        viewModel.gender.setValue(2);
+    }
+
+    private void updateGenderButtons(int selected) {
+        binding.buttonSex1.setSelected(selected == 0);
+        binding.buttonSex2.setSelected(selected == 1);
+        binding.buttonSex3.setSelected(selected == 2);
+
+        // 선택된 버튼만 파란색 텍스트, 나머지는 회색
+        binding.buttonSex1.setTextColor(getResources().getColor(selected == 0 ? R.color.focus_color : R.color.C777777));
+        binding.buttonSex2.setTextColor(getResources().getColor(selected == 1 ? R.color.focus_color : R.color.C777777));
+        binding.buttonSex3.setTextColor(getResources().getColor(selected == 2 ? R.color.focus_color : R.color.C777777));
+    }
+
+    // 편집 모드 진입 시 버튼 스타일 업데이트
+    public void refreshGenderButtonStyle() {
+        updateGenderButtons(viewModel.gender.getValue());
     }
 
     public void onClickBirthDay() {
+        if (!isEditable.get()) {
+            return;
+        }
         if(true){
             com.kyad.traystorage.app.common.dialog.DatePickerDialog.show(this).setDate(viewModel.birthday.getValue())
                     .setListener(new com.kyad.traystorage.app.common.dialog.DatePickerDialog.ActionListener() {
