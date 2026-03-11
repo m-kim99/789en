@@ -3,6 +3,8 @@ package com.kyad.traystorage.app.main;
 import android.app.Dialog;
 import android.content.Intent;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import androidx.databinding.ObservableBoolean;
@@ -115,6 +117,21 @@ public class DocumentDetailActivity extends BaseBindingActivity<ActivityDocument
             startActivity(intent);
         });
         binding.imageList.setAdapter(imageListAdapter);
+
+        // 쿠팡 광고 WebView 설정
+        WebView adWebView = binding.adWebview;
+        WebSettings webSettings = adWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        adWebView.setBackgroundColor(0x00000000);
+        String adHtml = "<html><head><style>body{margin:0;padding:0;}</style></head><body>"
+                + "<iframe src='https://ads-partners.coupang.com/widgets.html?id=971272&template=carousel&trackingCode=AF1883524&subId=&width=680&height=140&tsource=' "
+                + "width='100%' height='140' frameborder='0' scrolling='no' referrerpolicy='unsafe-url'></iframe>"
+                + "</body></html>";
+        adWebView.loadDataWithBaseURL("https://ads-partners.coupang.com", adHtml, "text/html", "UTF-8", null);
     }
 
     public void onEditClick() {
