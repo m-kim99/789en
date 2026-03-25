@@ -66,12 +66,7 @@ public class SplashActivity extends BaseBindingActivity<ActivitySplashBinding> {
     }
 
     void startApp() {
-        //if(true){goTest();return;}
-        // 테스트용: 온보딩 강제 표시 이건 테스트용!!
         PrefMgr prefMgr = new PrefMgr(getSharedPreferences(PrefMgr.traystorage_PREFS, MODE_PRIVATE));
-        prefMgr.put(PrefMgr.FIRST_START, true);
-        
-        prefMgr = new PrefMgr(getSharedPreferences(PrefMgr.traystorage_PREFS, MODE_PRIVATE));
         boolean isfirst = prefMgr.getBoolean(PrefMgr.FIRST_START, true);
         if(isfirst)
             new Handler(Looper.getMainLooper()).postDelayed(this::goIntro, 2000);

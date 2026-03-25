@@ -329,7 +329,11 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     private void sortDocuments() {
         switch (currentSortType) {
             case 0:
-                Collections.reverse(allList);
+                // 서버가 create_time DESC로 반환하므로 최신순은 정렬 불필요
+                Collections.sort(allList, (a, b) -> {
+                    if (a.create_time == null || b.create_time == null) return 0;
+                    return b.create_time.compareTo(a.create_time);
+                });
                 break;
             case 1:
                 Collections.sort(allList, (a, b) -> {

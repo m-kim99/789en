@@ -41,6 +41,12 @@ public class LoadingViewModel extends BaseViewModel {
                     apiListener.onError(App.get().getString(R.string.error_network_content));
                 }
             }
+
+            @Override
+            public void onError(Throwable e) {
+                super.onError(e);
+                apiListener.onLoginFailure(0);
+            }
         }));
     }
 

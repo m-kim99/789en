@@ -16,7 +16,7 @@ public class ModelUser extends ModelBase {
     public String create_time;
     public String exit_reg_time;
     public String stop_remark;
-    public String access_token = "123123";
+    public String access_token = "";
     public Integer is_agree;
     //auto login
     public String password;

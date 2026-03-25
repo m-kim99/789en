@@ -12,7 +12,7 @@ public class ModelPopupInfo extends ModelBase {
     public Integer move_type;
     public String move_path;
 
-    public class ListModel extends ModelBase {
+    public static class ListModel extends ModelBase {
         public List<ModelPopupInfo> popup_list;
     }
 }

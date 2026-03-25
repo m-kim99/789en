@@ -324,8 +324,7 @@ public class DocumentEditActivity extends BaseBindingActivity<ActivityDocumentEd
             Utils.showCustomToast(this, R.string.tag_limit, Toast.LENGTH_SHORT);
             return;
         }
-        String tagString = binding.textTag.getPlanText();
-        tagString.replace(" ", "");
+        String tagString = binding.textTag.getPlanText().replace(" ", "");
         if (tagList.contains(tagString)) {
             Utils.showCustomToast(this, R.string.tag_exist, Toast.LENGTH_SHORT);
             return;

@@ -60,7 +60,8 @@ public class SettingActivity extends BaseBindingActivity<ActivitySettingBinding>
         binding.setActivity(this);
         binding.editId.setText(DataManager.get().getModel(ModelUser.class).login_id);
         binding.textVersion.setText(Utils.getVersion(this));
-        int signupType = DataManager.get().getModel(ModelUser.class).signup_type;
+        ModelUser u = DataManager.get().getModel(ModelUser.class);
+        int signupType = (u != null && u.signup_type != null) ? u.signup_type : 0;
         if (signupType == 0) {
             binding.llyAccountInfo.setVisibility(View.VISIBLE);
         } else {

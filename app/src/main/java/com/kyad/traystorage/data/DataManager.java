@@ -2,6 +2,8 @@ package com.kyad.traystorage.data;
 
 import android.content.Context;
 
+import com.kyad.traystorage.BuildConfig;
+
 import androidx.annotation.NonNull;
 
 import com.kyad.traystorage.data.local.LocalDataSourceFactory;
@@ -391,6 +393,7 @@ public class DataManager {
      ********************************/
     
     public boolean isTestMode() {
+        if (!BuildConfig.TEST_MODE_ENABLED) return false;
         ModelUser user = getModel(ModelUser.class);
         return user != null && user.id == 999;
     }

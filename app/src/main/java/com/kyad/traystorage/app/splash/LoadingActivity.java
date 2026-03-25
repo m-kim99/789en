@@ -109,7 +109,8 @@ public class LoadingActivity extends BaseBindingActivity<ActivityLoadingBinding>
 
             @Override
             public void onLoginSuccess() {
-                if(DataManager.get().getModel(ModelUser.class).is_agree == 1)
+                ModelUser u = DataManager.get().getModel(ModelUser.class);
+                if(u != null && Integer.valueOf(1).equals(u.is_agree))
                     goMain();
                 else{
                     Intent intent = new Intent(LoadingActivity.this, SignupActivity.class);

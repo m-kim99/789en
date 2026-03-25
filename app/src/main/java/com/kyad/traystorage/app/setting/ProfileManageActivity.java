@@ -79,7 +79,7 @@ public class ProfileManageActivity extends BaseBindingActivity<ActivityProfileMa
         ModelUser oldUser = DataManager.get().getModel(ModelUser.class);
         viewModel.name.setValue(oldUser.name);
         viewModel.email.setValue(oldUser.email);
-        viewModel.birthday.setValue(oldUser.birthday.replace("-","."));
+        viewModel.birthday.setValue(oldUser.birthday != null ? oldUser.birthday.replace("-", ".") : "");
         viewModel.profile_image.setValue(oldUser.profile_image);
         viewModel.gender.setValue(oldUser.gender);
         // 초기화 시 성별 버튼 상태 설정 (평상시 스타일)

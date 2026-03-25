@@ -3,11 +3,13 @@ package com.kyad.traystorage.app.auth;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Handler;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 
 import com.facebook.FacebookException;
 import com.kyad.traystorage.App;
+import com.kyad.traystorage.BuildConfig;
 import com.kyad.traystorage.R;
 import com.kyad.traystorage.app.common.dialog.LoadingDialog;
 import com.kyad.traystorage.app.common.util.Utils;
@@ -57,6 +59,9 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
 
     private void initView() {
         binding.setActivity(this);
+        binding.btnTestMode.setVisibility(
+            BuildConfig.TEST_MODE_ENABLED ? View.VISIBLE : View.GONE
+        );
     }
 
     private void initViewModel() {

@@ -85,6 +85,13 @@ public class ChangePasswordActivity extends BaseBindingActivity<ActivityChangePa
                     super.onComplete();
 
                     if (getResponse().result == 0) {
+                        // 자동로그인을 위해 로컬에 저장된 비밀번호도 갱신
+                        com.kyad.traystorage.data.model.ModelUser user =
+                                DataManager.get().getModel(com.kyad.traystorage.data.model.ModelUser.class);
+                        if (user != null) {
+                            user.password = password;
+                            DataManager.get().setModel(user);
+                        }
                         AlertDialog.show(ChangePasswordActivity.this)
                                 .setText(getString(R.string.change_pwd_success), "", getString(R.string.confirm))
                                 .setListener(() -> {onBackPressed();});

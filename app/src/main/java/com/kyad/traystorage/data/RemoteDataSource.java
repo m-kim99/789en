@@ -36,12 +36,11 @@ public interface RemoteDataSource {
     String API_MARKETING_URL = "http://traystorage.kr/server/api/app/term?type=marketing";
 
     int API_RESULT_SUCCESS = 0;
-    int API_RESULT_ERROR_SYSTEM = 101;
+    int API_RESULT_ERROR_SERVER = 101;
     int API_RESULT_ERROR_DB = 102;
-    int API_RESULT_ERROR_PRIVILEGE = 103;
-    int API_RESULT_ERROR_PARAM = 104;
-    int API_RESULT_ERROR_UPLOAD = 105;
-    int API_RESULT_ERROR_ACCESS_TOKEN = 106;
+    int API_RESULT_ERROR_PARAM = 103;
+    int API_RESULT_ERROR_ACCESS_TOKEN = 104;  // PHP Constants.php 기준
+    int API_RESULT_ERROR_VERIFY_CODE = 105;
 
     @POST("user/login")
     @FormUrlEncoded
