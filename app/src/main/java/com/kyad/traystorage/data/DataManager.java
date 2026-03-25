@@ -174,7 +174,7 @@ public class DataManager {
                     response.data = data;
                 } else {
                     response.result = 401;
-                    response.msg = "문서를 찾을 수 없습니다.";
+                    response.msg = "Document not found.";
                 }
                 return response;
             }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());

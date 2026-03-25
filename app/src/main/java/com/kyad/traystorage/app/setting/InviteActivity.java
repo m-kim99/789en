@@ -31,7 +31,7 @@ public class InviteActivity extends BaseBindingActivity<ActivityInviteBinding> {
     public void onConfirm(){
 
         String appInstallUrl = "https://play.google.com/store/apps/details?id=com.kyad.traystorage";
-        String content = "문서관리가 필요해?\nTraystorage으로 해결!\n지금 Traystorage을 설치하고 문서를 안전하게 관리해 보세요!";
+        String content = "Need to manage documents?\nSolve it with Traystorage!\nInstall Traystorage now and manage your documents safely!";
         content = content + "\n\n" + appInstallUrl;
 
         Intent sendIntent = new Intent();

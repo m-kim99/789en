@@ -337,7 +337,7 @@ public class LocalStorageManager {
     public void initDefaultCategory() {
         List<ModelCategory> categories = getCategories();
         if (categories.isEmpty()) {
-            insertCategory("기본", 0);
+            insertCategory("Default", 0);
         }
         // 테스트용 공지사항 초기화
         initDefaultNotice();
@@ -371,15 +371,15 @@ public class LocalStorageManager {
                 detail.title = notice.title;
                 detail.reg_time = notice.reg_time;
                 detail.view_count = notice.view_count + 1;
-                detail.content = "[테스트 공지사항]\n\n" +
-                        "안녕하세요, TrayStorage 테스트 모드입니다.\n\n" +
-                        "이 공지사항은 테스트 목적으로 생성된 샘플 데이터입니다.\n" +
-                        "실제 서비스에서는 서버에서 공지사항을 불러옵니다.\n\n" +
-                        "테스트 기능:\n" +
-                        "• 공지사항 목록 조회\n" +
-                        "• 공지사항 상세 조회\n" +
-                        "• 조회수 증가\n\n" +
-                        "감사합니다.";
+                detail.content = "[Test Notice]\n\n" +
+                        "Hello, this is TrayStorage test mode.\n\n" +
+                        "This notice is sample data created for testing purposes.\n" +
+                        "In the actual service, notices are loaded from the server.\n\n" +
+                        "Test features:\n" +
+                        "• Notice list view\n" +
+                        "• Notice detail view\n" +
+                        "• View count increment\n\n" +
+                        "Thank you.";
                 
                 // 조회수 업데이트
                 notice.view_count++;
@@ -399,7 +399,7 @@ public class LocalStorageManager {
 
             ModelNotice notice = new ModelNotice();
             notice.id = newId;
-            notice.title = "[공지] TrayStorage 테스트 모드 안내";
+            notice.title = "[Notice] TrayStorage Test Mode Guide";
             notice.reg_time = getCurrentTime();
             notice.view_count = 0;
 
@@ -449,9 +449,9 @@ public class LocalStorageManager {
             prefs.edit().putInt(KEY_ASK_ID_SEQ, newId + 1).apply();
 
             ModelAsk ask = new ModelAsk();
-            ask.title = "테스트 문의입니다";
-            ask.content = "이것은 테스트 모드에서 생성된 샘플 문의입니다.\n문의 기능이 정상 동작하는지 확인할 수 있습니다.";
-            ask.reply = "안녕하세요, 테스트 답변입니다.\n\n문의 주신 내용 확인했습니다.\n테스트 모드에서는 실제 서버 연동 없이 로컬에서 문의 기능을 테스트할 수 있습니다.\n\n감사합니다.";
+            ask.title = "Test inquiry";
+            ask.content = "This is a sample inquiry created in test mode.\nYou can verify that the inquiry feature works correctly.";
+            ask.reply = "Hello, this is a test reply.\n\nWe have confirmed your inquiry.\nIn test mode, you can test the inquiry feature locally without a real server connection.\n\nThank you.";
             ask.status = 1; // 답변 완료
             ask.reg_time = getCurrentTime();
 
@@ -468,19 +468,19 @@ public class LocalStorageManager {
         // 테스트용 약관 목록
         ModelAgreement agree1 = new ModelAgreement();
         agree1.id = 1;
-        agree1.title = "서비스 이용약관";
+        agree1.title = "Terms of Service";
         agree1.status = 1;
         list.add(agree1);
-        
+
         ModelAgreement agree2 = new ModelAgreement();
         agree2.id = 2;
-        agree2.title = "개인정보 처리방침";
+        agree2.title = "Privacy Policy";
         agree2.status = 1;
         list.add(agree2);
-        
+
         ModelAgreement agree3 = new ModelAgreement();
         agree3.id = 3;
-        agree3.title = "위치기반 서비스 이용약관";
+        agree3.title = "Location-Based Services Terms";
         agree3.status = 1;
         list.add(agree3);
         
@@ -493,20 +493,20 @@ public class LocalStorageManager {
         
         switch (id) {
             case 1:
-                agree.title = "서비스 이용약관";
-                agree.content = "<h2>서비스 이용약관</h2><p>테스트 모드용 서비스 이용약관입니다.</p><p>본 약관은 TrayStorage 앱의 테스트 기능 확인을 위한 샘플 데이터입니다.</p>";
+                agree.title = "Terms of Service";
+                agree.content = "<h2>Terms of Service</h2><p>Terms of Service for test mode.</p><p>This is sample data for verifying test features of the TrayStorage app.</p>";
                 break;
             case 2:
-                agree.title = "개인정보 처리방침";
-                agree.content = "<h2>개인정보 처리방침</h2><p>테스트 모드용 개인정보 처리방침입니다.</p><p>본 방침은 TrayStorage 앱의 테스트 기능 확인을 위한 샘플 데이터입니다.</p>";
+                agree.title = "Privacy Policy";
+                agree.content = "<h2>Privacy Policy</h2><p>Privacy Policy for test mode.</p><p>This is sample data for verifying test features of the TrayStorage app.</p>";
                 break;
             case 3:
-                agree.title = "위치기반 서비스 이용약관";
-                agree.content = "<h2>위치기반 서비스 이용약관</h2><p>테스트 모드용 위치기반 서비스 이용약관입니다.</p><p>본 약관은 TrayStorage 앱의 테스트 기능 확인을 위한 샘플 데이터입니다.</p>";
+                agree.title = "Location-Based Services Terms";
+                agree.content = "<h2>Location-Based Services Terms</h2><p>Location-Based Services Terms for test mode.</p><p>This is sample data for verifying test features of the TrayStorage app.</p>";
                 break;
             default:
-                agree.title = "약관";
-                agree.content = "<p>테스트용 약관 내용입니다.</p>";
+                agree.title = "Terms";
+                agree.content = "<p>Sample terms content for testing.</p>";
                 break;
         }
         agree.status = 1;

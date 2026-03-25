@@ -72,7 +72,7 @@
         android:layout_below="@id/indicator"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="중요한 문서, 필요할 때마다\n바로 찾기 어려우시죠?"
+        android:text="Important documents — hard to find\nwhen you need them?"
         android:textColor="#111111"
         android:textSize="24sp"
         android:lineSpacingExtra="8dp"

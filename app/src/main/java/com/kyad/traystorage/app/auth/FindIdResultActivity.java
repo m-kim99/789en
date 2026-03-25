@@ -34,13 +34,13 @@ public class FindIdResultActivity extends BaseBindingActivity<ActivityFindidResu
         } else {
             String temp = "";
             if (type.equals("1")) {
-                temp = "구글로 가입하셨습니다";
+                temp = "Signed up with Google";
             } else if (type.equals("2")) {
-                temp = "네이버로 가입하셨습니다";
+                temp = "Signed up with Naver";
             } else if (type.equals("3")) {
-                temp = "페북으로 가입하셨습니다";
+                temp = "Signed up with Facebook";
             } else if (type.equals("5")) {
-                temp = "카카오로 가입하셨습니다";
+                temp = "Signed up with Kakao";
             }
             binding.textResult.setText(temp);
         }

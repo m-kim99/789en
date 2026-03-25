@@ -235,41 +235,6 @@
             android:authorities="com.facebook.app.FacebookContentProvider836486066548932"
             android:exported="true" />
 
-        <activity
-            android:name="com.nhn.android.naverlogin.ui.OAuthCustomTabActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Intent URL 에서 로그인 액티비티를 실행하기 위해 설정 -->
-                <data
-                    android:host="authorize"
-                    android:path="/"
-                    android:scheme="traystorage" />
-            </intent-filter>
-        </activity>
-
-        <!-- kakao -->
-        <activity
-            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
-                    android:scheme="kakao98498c102944c0477c37fcaa25a98fa7" />
-            </intent-filter>
-        </activity>
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="98498c102944c0477c37fcaa25a98fa7"/>
     </application>
 
 </manifest>

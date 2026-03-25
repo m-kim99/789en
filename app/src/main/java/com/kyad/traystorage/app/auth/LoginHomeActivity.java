@@ -20,19 +20,13 @@ import com.kyad.traystorage.data.model.ModelUser;
 import com.kyad.traystorage.data.remote.ResponseSubscriber;
 import com.kyad.traystorage.databinding.ActivityLoginHomeBinding;
 import com.kyad.traystorage.service.GoogleUtils;
-import com.kyad.traystorage.service.KakaoLoginUtils;
-import com.kyad.traystorage.service.NaverLoginUtils;
 import com.kyad.traystorage.service.facebook.FacebookUtils;
 import com.kyad.traystorage.service.facebook.model.MFacebookUser;
 
 import base.BaseBindingActivity;
 import base.BaseViewModel;
-import helper.Util;
-
 public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBinding> {
     ViewModel viewModel;
-    NaverLoginUtils naverUtils = null;
-    KakaoLoginUtils kakaoUtils = null;
     GoogleUtils googleUtils = null;
     FacebookUtils facebookUtils = null;
 
@@ -51,8 +45,6 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
         initViewModel();
         initView();
 
-        naverUtils = new NaverLoginUtils(this);
-        kakaoUtils = KakaoLoginUtils.getInstance(this);
         googleUtils = new GoogleUtils(this);
         facebookUtils = new FacebookUtils(this);
     }
@@ -87,7 +79,7 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
         ModelUser testUser = new ModelUser();
         testUser.id = 999;
         testUser.login_id = "test_user";
-        testUser.name = "테스트유저";
+        testUser.name = "TestUser";
         testUser.access_token = "test_access_token_12345";
         testUser.phone_number = "01012345678";
         testUser.email = "test@test.com";
@@ -112,20 +104,7 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
     }
 
     public void goSnsSignup(Integer type) {
-        if (type == 0) {
-            //kakao
-            kakaoUtils.login(new KakaoLoginUtils.LoginListner() {
-                @Override
-                public void onSucceed(String userId, KakaoLoginUtils.UserInfo userInfo) {
-                    viewModel.login(userInfo.getId(), userInfo.getId(), "5",true);
-                }
-
-                @Override
-                public void onFailed(String error) {
-                    Utils.showCustomToast(LoginHomeActivity.this, R.string.kakao_login_failed);
-                }
-            });
-        } else if (type == 1) {
+        if (type == 1) {
             //google
             googleUtils.login(LoginHomeActivity.this, new GoogleUtils.LoginListener() {
                 @Override
@@ -154,28 +133,12 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
                     }
 
                     String userid = String.valueOf(userInfo.id);
-                    viewModel.login(userid, userid, "3",true);
+                    viewModel.login(userid, userid, "3", true);
                 }
 
                 @Override
                 public void onFailed(FacebookException e) {
                     Utils.showCustomToast(LoginHomeActivity.this, R.string.facebook_login_failed);
-                }
-            });
-        } else if (type == 3) {
-            //naver
-            naverUtils.login(LoginHomeActivity.this, new NaverLoginUtils.LoginListener() {
-                @Override
-                public void onSuccessed(NaverLoginUtils.UserInfo userInfo) {
-                    //viewModel.login(userInfo.getEmail(), userInfo.getId(), login_type);
-                    //Util.showToast(LoginActivity.this, "Naver Login=>" + userInfo.getId());
-                    String userid = userInfo.getId();
-                    viewModel.login(userid, userid, "2", true);
-                }
-
-                @Override
-                public void onFailed(String error) {
-                    Utils.showCustomToast(LoginHomeActivity.this, R.string.naver_login_failed);
                 }
             });
         }

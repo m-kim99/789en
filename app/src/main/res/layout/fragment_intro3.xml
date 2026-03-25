@@ -71,7 +71,7 @@
         android:layout_below="@id/indicator"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="NFC 태그"
+        android:text="NFC Tags"
         android:textColor="#111111"
         android:textSize="24sp"
         android:includeFontPadding="false" />
@@ -85,7 +85,7 @@
         android:layout_below="@id/text_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
-        android:text="또한 TrayStorage에 부착된 NFC 태그에\n문서를 등록해 두면, 나의 동료도 NFC 태그를\n통해 등록된 문서를 확인할 수 있어요."
+        android:text="By registering documents to NFC tags on TrayStorage,\nyour colleagues can also view\nregistered documents through NFC tags."
         android:textColor="#6B6C6E"
         android:textSize="16sp"
         android:lineSpacingExtra="8dp"

@@ -149,7 +149,7 @@ public class CategoryDocumentsActivity extends BaseBindingActivity<ActivityCateg
     }
 
     private void updateUI() {
-        binding.docCount.setText(allList.size() + "건");
+        binding.docCount.setText(String.valueOf(allList.size()));
         if (allList.size() == 0 && !lastSearchKey.isEmpty()) {
             binding.docList.setVisibility(View.GONE);
             binding.layoutNotResult.setVisibility(View.VISIBLE);

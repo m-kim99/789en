@@ -197,7 +197,7 @@ public class SignupActivity extends BaseBindingActivity<ActivitySignupBinding> {
             public void afterTextChanged(Editable editable) {
                 int length = editable.length();
                 if (length > 0 && length < 6) {
-                    binding.editId.setError("6자 이상 입력해주세요");
+                    binding.editId.setError("Please enter at least 6 characters");
                 } else {
                     binding.editId.setError(null);
                 }
@@ -231,7 +231,7 @@ public class SignupActivity extends BaseBindingActivity<ActivitySignupBinding> {
             public void afterTextChanged(Editable editable) {
                 int length = editable.length();
                 if (length > 0 && length < 6) {
-                    binding.editPassword.setError("6자 이상 입력해주세요");
+                    binding.editPassword.setError("Please enter at least 6 characters");
                 } else {
                     binding.editPassword.setError(null);
                 }

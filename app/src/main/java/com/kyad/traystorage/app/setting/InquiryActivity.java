@@ -55,7 +55,7 @@ public class InquiryActivity extends BaseBindingActivity<ActivityInquiryBindingI
                         askList.clear();
                         askList.addAll(getResponse().data.list);
                         binding.layoutNot.setVisibility(askList.size() == 0 ? View.VISIBLE : View.GONE);
-                        binding.countText.setText(getString(R.string.inquiry) + " " + askList.size() + "건");
+                        binding.countText.setText(getString(R.string.inquiry) + " " + askList.size());
 
                     } else if (!getResponse().msg.isEmpty()) {
                         onApiError(getResponse().msg);

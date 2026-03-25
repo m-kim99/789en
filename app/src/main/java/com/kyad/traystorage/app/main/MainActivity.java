@@ -159,7 +159,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     private void initView() {
         binding.setActivity(this);
 
-        binding.docCount.setText("0건");
+        binding.docCount.setText("0");
         docListAdapter = new DocumentListAdapter();
         binding.docList.setAdapter(docListAdapter);
         
@@ -359,7 +359,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     }
 
     private void updateUI() {
-        binding.docCount.setText(allList.size() + "건");
+        binding.docCount.setText(String.valueOf(allList.size()));
         showType.set(allList.size() > 0 ? 2 : 1);
         if (allList.size() == 0 && !lastSearchKey.isEmpty()) {
             binding.docList.setVisibility(View.GONE);

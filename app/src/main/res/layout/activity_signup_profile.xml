@@ -58,7 +58,7 @@
                     android:layout_marginBottom="20dp"
                     android:gravity="center"
                     android:lineHeight="32sp"
-                    android:text="거의 다 왔어요!\nTrayStorage 이용을 위해\n몇 가지 정보만 더 입력해 주세요."
+                    android:text="Almost there!\nPlease enter a few more details\nto start using TrayStorage."
                     android:textColor="#111111"
                     android:textSize="22sp"
                     android:includeFontPadding="false" />
