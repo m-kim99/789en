@@ -32,7 +32,7 @@ public class LicenseActivity extends BaseBindingActivity<ActivityLicenseBinding>
     private void initView() {
         binding.setActivity(this);
         binding.listView.setAdapter(new ListAdapter());
-        binding.webView.loadUrl("http://traystorage.kr/server/api/App/term?type=opensource");
+        binding.webView.loadUrl("http://traystorage.us/server/api/App/term?type=opensource");
     }
 
     public void onConfirm(){}
