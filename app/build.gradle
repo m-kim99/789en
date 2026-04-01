@@ -6,7 +6,7 @@ android {
     namespace "com.kyad.traystorage"
 
     defaultConfig {
-//        applicationId "com.kyad.traystorage"
+        applicationId "com.us.traystorage"
         minSdk 21
         targetSdk 35
         multiDexEnabled true
