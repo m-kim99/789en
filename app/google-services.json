@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "401700518744",
-    "project_id": "traystorage-and",
-    "storage_bucket": "traystorage-and.firebasestorage.app"
+    "project_number": "552294869890",
+    "project_id": "traystorageen",
+    "storage_bucket": "traystorageen.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:401700518744:android:f27d906179b6b88c93c32d",
+        "mobilesdk_app_id": "1:552294869890:android:cf96923bbdf5c48927fd9b",
         "android_client_info": {
-          "package_name": "com.kyad.traystorage"
+          "package_name": "com.us.traystorage"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBTloV7_RGyC4B6IFnRCemslcL4ZpbkuuY"
+          "current_key": "AIzaSyAefGUT8vOCB08tgoBnIVGf2crIYbf30LQ"
         }
       ],
       "services": {
