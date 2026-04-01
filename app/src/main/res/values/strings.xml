@@ -245,9 +245,6 @@
     <string name="naver_login_failed">Naver account login failed.</string>
     <string name="kakao_login_failed">Kakao account login failed.</string>
     <string name="google_login_failed">Google account login failed.</string>
-    <string name="facebook_login_failed">Facebook account login failed.</string>
-    <string name="facebook_app_id">4631666656931525</string>
-    <string name="fb_login_protocol_scheme">fb4631666656931525</string>
     <string name="signup_close">If you close this screen,\nsign up will be interrupted.\nDo you want to stop signing up?</string>
     <string name="login_agree">Traystorage terms have been updated.\nPlease agree to the terms.</string>
     <string name="required">(Required)</string>

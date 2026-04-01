@@ -119,9 +119,6 @@ dependencies {
     // naver/kakao login removed
     implementation 'org.jsoup:jsoup:1.14.3'
 
-    // facebook auth
-    implementation 'com.facebook.android:facebook-login:14.1.1'
-
     //for google sigin
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
 

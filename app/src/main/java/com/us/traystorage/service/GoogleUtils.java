@@ -72,6 +72,10 @@ public class GoogleUtils implements GoogleApiClient.OnConnectionFailedListener {
 
     //handle the sign in result
     private void handleSignInResult(GoogleSignInResult result) {
+        if (result == null) {
+            if (mLoginListner != null) mLoginListner.onFailed(ConnectionResult.INVALID_ACCOUNT);
+            return;
+        }
         Log.d("RESULT:::", String.valueOf(result.isSuccess()));
 
         if (result.isSuccess()) {

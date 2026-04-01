@@ -37,8 +37,6 @@ public class FindIdResultActivity extends BaseBindingActivity<ActivityFindidResu
                 temp = "Signed up with Google";
             } else if (type.equals("2")) {
                 temp = "Signed up with Naver";
-            } else if (type.equals("3")) {
-                temp = "Signed up with Facebook";
             } else if (type.equals("5")) {
                 temp = "Signed up with Kakao";
             }

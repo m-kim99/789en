@@ -137,15 +137,6 @@
                     android:src="@drawable/icon_sns_google_60"
                     android:onClick="@{()->activity.goSnsSignup(1)}"
                     android:scaleType="fitCenter" />
-
-                <!-- Facebook -->
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="28dp"
-                    android:src="@drawable/icon_sns_facebook_60"
-                    android:onClick="@{()->activity.goSnsSignup(2)}"
-                    android:scaleType="fitCenter" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

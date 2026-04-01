@@ -3,13 +3,9 @@ package com.us.traystorage.app.auth;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Handler;
-import android.view.View;
-
 import androidx.annotation.Nullable;
 
-import com.facebook.FacebookException;
 import com.us.traystorage.App;
-import com.us.traystorage.BuildConfig;
 import com.us.traystorage.R;
 import com.us.traystorage.app.common.dialog.LoadingDialog;
 import com.us.traystorage.app.common.util.Utils;
@@ -20,15 +16,12 @@ import com.us.traystorage.data.model.ModelUser;
 import com.us.traystorage.data.remote.ResponseSubscriber;
 import com.us.traystorage.databinding.ActivityLoginHomeBinding;
 import com.us.traystorage.service.GoogleUtils;
-import com.us.traystorage.service.facebook.FacebookUtils;
-import com.us.traystorage.service.facebook.model.MFacebookUser;
 
 import base.BaseBindingActivity;
 import base.BaseViewModel;
 public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBinding> {
     ViewModel viewModel;
     GoogleUtils googleUtils = null;
-    FacebookUtils facebookUtils = null;
 
     @Override
     public int getLayout() {
@@ -46,7 +39,6 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
         initView();
 
         googleUtils = new GoogleUtils(this);
-        facebookUtils = new FacebookUtils(this);
     }
 
     private void initView() {
@@ -123,25 +115,6 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
                     Utils.showCustomToast(LoginHomeActivity.this, R.string.google_login_failed);
                 }
             });
-        } else if (type == 2) {
-            //facebook
-            facebookUtils.login(LoginHomeActivity.this, new FacebookUtils.FacebookUserInfoListner() {
-                @Override
-                public void onGetUserInfo(MFacebookUser userInfo) {
-                    if (userInfo == null) {
-                        Utils.showCustomToast(LoginHomeActivity.this, R.string.facebook_login_failed);
-                        return;
-                    }
-
-                    String userid = String.valueOf(userInfo.id);
-                    viewModel.login(userid, userid, "3", true);
-                }
-
-                @Override
-                public void onFailed(FacebookException e) {
-                    Utils.showCustomToast(LoginHomeActivity.this, R.string.facebook_login_failed);
-                }
-            });
         }
     }
 
@@ -197,10 +170,6 @@ public class LoginHomeActivity extends BaseBindingActivity<ActivityLoginHomeBind
         super.onActivityResult(requestCode, resultCode, data);
 
         if (googleUtils != null && googleUtils.onActivityResult(requestCode, resultCode, data)) {
-            return;
-        }
-
-        if (facebookUtils != null && facebookUtils.onActivityResult(requestCode, resultCode, data)) {
             return;
         }
     }
