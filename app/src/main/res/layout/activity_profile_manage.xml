@@ -8,11 +8,11 @@
 
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.setting.ProfileManageActivity" />
+            type="com.us.traystorage.app.setting.ProfileManageActivity" />
 
         <variable
             name="model"
-            type="com.kyad.traystorage.app.setting.ProfileManageActivity.ViewModel" />
+            type="com.us.traystorage.app.setting.ProfileManageActivity.ViewModel" />
     </data>
 
     <LinearLayout
@@ -22,7 +22,7 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <!-- 헤더 -->
+        <!-- ?�더 -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -39,7 +39,7 @@
                 android:padding="12dp"
                 android:src="@drawable/ic_back" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,8 +49,8 @@
                 android:textSize="18sp"
                 android:includeFontPadding="false" />
 
-            <!-- 수정 버튼 (평상시) -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- ?�정 버튼 (?�상?? -->
+            <com.us.traystorage.app.common.font.FontTextView
                 android:id="@+id/btn_edit"
                 style="@style/font_spoqahansansneo_medium"
                 android:layout_width="wrap_content"
@@ -65,8 +65,8 @@
                 android:includeFontPadding="false"
                 android:visibility="@{activity.isEditable?View.GONE:View.VISIBLE}" />
 
-            <!-- 완료 버튼 (수정시) -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- ?�료 버튼 (?�정?? -->
+            <com.us.traystorage.app.common.font.FontTextView
                 android:id="@+id/btn_complete"
                 style="@style/font_spoqahansansneo_medium"
                 android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
                 android:orientation="vertical"
                 android:paddingTop="24dp">
 
-                <!-- 프로필 이미지 -->
+                <!-- ?�로???��?지 -->
                 <RelativeLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
@@ -123,8 +123,8 @@
                         android:visibility="@{activity.isEditable?View.VISIBLE:View.GONE}" />
                 </RelativeLayout>
 
-                <!-- 이름 (평상시) -->
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <!-- ?�름 (?�상?? -->
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/label_name"
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="wrap_content"
@@ -137,7 +137,7 @@
                     android:includeFontPadding="false"
                     android:visibility="@{activity.isEditable?View.GONE:View.VISIBLE}" />
 
-                <!-- 이름 입력 (수정시) -->
+                <!-- ?�름 ?�력 (?�정?? -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
                     android:layout_marginBottom="20dp"
                     android:visibility="@{activity.isEditable?View.VISIBLE:View.GONE}">
 
-                    <com.kyad.traystorage.app.common.font.FontEditText
+                    <com.us.traystorage.app.common.font.FontEditText
                         android:id="@+id/edit_name"
                         style="@style/font_spoqahansansneo_bold"
                         android:layout_width="match_parent"
@@ -175,13 +175,13 @@
                         android:background="#DDDDDD" />
                 </RelativeLayout>
 
-                <!-- 구분선 -->
+                <!-- 구분??-->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="8dp"
                     android:background="#F5F5F5" />
 
-                <!-- 기본 정보 섹션 -->
+                <!-- 기본 ?�보 ?�션 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
                     android:orientation="vertical"
                     android:paddingHorizontal="20dp">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_spoqahansansneo_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -198,7 +198,7 @@
                         android:textSize="16sp"
                         android:includeFontPadding="false" />
 
-                    <!-- 생년월일 -->
+                    <!-- ?�년?�일 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -206,7 +206,7 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_spoqahansansneo_regular"
                             android:layout_width="72dp"
                             android:layout_height="wrap_content"
@@ -220,7 +220,7 @@
                             android:layout_height="wrap_content"
                             android:onClick="@{()->activity.onClickBirthDay()}">
 
-                            <com.kyad.traystorage.app.common.font.FontTextView
+                            <com.us.traystorage.app.common.font.FontTextView
                                 android:id="@+id/edit_birthday"
                                 style="@style/font_spoqahansansneo_regular"
                                 android:layout_width="match_parent"
@@ -245,7 +245,7 @@
                         </RelativeLayout>
                     </LinearLayout>
 
-                    <!-- 이메일 -->
+                    <!-- ?�메??-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_spoqahansansneo_regular"
                             android:layout_width="72dp"
                             android:layout_height="wrap_content"
@@ -262,7 +262,7 @@
                             android:textSize="14sp"
                             android:includeFontPadding="false" />
 
-                        <com.kyad.traystorage.app.common.font.FontEditText
+                        <com.us.traystorage.app.common.font.FontEditText
                             android:id="@+id/edit_email"
                             style="@style/font_spoqahansansneo_regular"
                             android:layout_width="match_parent"
@@ -278,7 +278,7 @@
                             android:textSize="16sp" />
                     </LinearLayout>
 
-                    <!-- 성별 -->
+                    <!-- ?�별 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -286,7 +286,7 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_spoqahansansneo_regular"
                             android:layout_width="72dp"
                             android:layout_height="wrap_content"
@@ -300,7 +300,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.kyad.traystorage.app.common.font.FontButton
+                            <com.us.traystorage.app.common.font.FontButton
                                 android:id="@+id/button_sex1"
                                 style="@style/font_spoqahansansneo_medium"
                                 android:layout_width="56dp"
@@ -312,7 +312,7 @@
                                 android:textColor="#1E319D"
                                 android:textSize="14sp" />
 
-                            <com.kyad.traystorage.app.common.font.FontButton
+                            <com.us.traystorage.app.common.font.FontButton
                                 android:id="@+id/button_sex2"
                                 style="@style/font_spoqahansansneo_medium"
                                 android:layout_width="56dp"
@@ -325,7 +325,7 @@
                                 android:textColor="#1E319D"
                                 android:textSize="14sp" />
 
-                            <com.kyad.traystorage.app.common.font.FontButton
+                            <com.us.traystorage.app.common.font.FontButton
                                 android:id="@+id/button_sex3"
                                 style="@style/font_spoqahansansneo_medium"
                                 android:layout_width="56dp"

@@ -7,10 +7,10 @@
         <import type="android.view.View" />
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.main.MainActivity.DocumentListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.main.MainActivity.DocumentListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.data.model.ModelDocument" />
+            type="com.us.traystorage.data.model.ModelDocument" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                         android:padding="1dp"
                         android:background="@{data.isWhite?@drawable/bg_label_round_border:null}"
                         android:src="@color/labelcolor1"/>
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:layout_width="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
@@ -60,7 +60,7 @@
                         android:maxLines="1"
                         android:text="@{data.title}"/>
                 </LinearLayout>
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="10dp"
@@ -71,7 +71,7 @@
                     android:textSize="15dp"
                     android:maxLines="2"
                     android:text="@{data.content}"/>
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:src="@drawable/icon_upload_16_copy"/>
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

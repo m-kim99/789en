@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- 상단 제목 영역 -->
+    <!-- ?�단 ?�목 ?�역 -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:paddingBottom="16dp"
         android:orientation="vertical">
 
-        <com.kyad.traystorage.app.common.font.FontTextView
+        <com.us.traystorage.app.common.font.FontTextView
             style="@style/font_notosans_kr_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:textSize="18sp"
             android:includeFontPadding="false" />
 
-        <com.kyad.traystorage.app.common.font.FontTextView
+        <com.us.traystorage.app.common.font.FontTextView
             style="@style/font_notosans_kr_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:includeFontPadding="false" />
     </LinearLayout>
 
-    <!-- 권한 리스트 영역 -->
+    <!-- 권한 리스???�역 -->
     <ScrollView
         android:id="@+id/permission_content"
         android:layout_width="match_parent"
@@ -52,14 +52,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 상단 구분선 -->
+            <!-- ?�단 구분??-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#EBEDF0" />
 
-            <!-- 필수 접근 권한 제목 -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- ?�수 ?�근 권한 ?�목 -->
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:textSize="16sp"
                 android:includeFontPadding="false" />
 
-            <!-- 권한 박스 1: 연락처 -->
+            <!-- 권한 박스 1: ?�락�?-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                     android:layout_marginStart="16dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                         android:textSize="14sp"
                         android:includeFontPadding="false" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 권한 박스 2: 카메라 -->
+            <!-- 권한 박스 2: 카메??-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                     android:layout_marginStart="16dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
                         android:textSize="14sp"
                         android:includeFontPadding="false" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 권한 박스 3: 저장공간 -->
+            <!-- 권한 박스 3: ?�?�공�?-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                     android:layout_marginStart="16dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -186,7 +186,7 @@
                         android:textSize="14sp"
                         android:includeFontPadding="false" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -199,14 +199,14 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 하단 구분선 -->
+            <!-- ?�단 구분??-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="24dp"
                 android:background="#EBEDF0" />
 
-            <!-- 안내 문구 -->
+            <!-- ?�내 문구 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -222,7 +222,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_bullet_dot" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- 하단 버튼 영역 -->
+    <!-- ?�단 버튼 ?�역 -->
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -249,7 +249,7 @@
             android:layout_height="1dp"
             android:background="#EBEDF0" />
 
-        <com.kyad.traystorage.app.common.font.FontButton
+        <com.us.traystorage.app.common.font.FontButton
             android:id="@+id/btn_confirm"
             style="@style/font_notosans_kr_bold"
             android:layout_width="match_parent"

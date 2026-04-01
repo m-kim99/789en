@@ -7,21 +7,21 @@
         <import type="android.view.View" />
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.auth.LoginHomeActivity" />
+            type="com.us.traystorage.app.auth.LoginHomeActivity" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- 배경 이미지 -->
+        <!-- 배경 ?��?지 -->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/login"
             android:scaleType="fitXY" />
 
-        <!-- 상단: 로고 + 문구 -->
+        <!-- ?�단: 로고 + 문구 -->
         <LinearLayout
             android:id="@+id/layout_header"
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:src="@drawable/view" />
 
             <!-- 문구 -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:includeFontPadding="false" />
         </LinearLayout>
 
-        <!-- 하단: 버튼 영역 -->
+        <!-- ?�단: 버튼 ?�역 -->
         <LinearLayout
             android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
@@ -64,8 +64,8 @@
             android:orientation="vertical"
             android:paddingHorizontal="32dp">
 
-            <!-- 테스트 모드 버튼 -->
-            <com.kyad.traystorage.app.common.font.FontButton
+            <!-- ?�스??모드 버튼 (비활?�화: ?�요??주석 ?�제?�여 ?�용)
+            <com.us.traystorage.app.common.font.FontButton
                 android:id="@+id/btn_test_mode"
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="match_parent"
@@ -78,9 +78,10 @@
                 android:gravity="center"
                 android:onClick="@{()->activity.goTestMode()}"
                 android:includeFontPadding="false" />
+            -->
 
-            <!-- 로그인 버튼 -->
-            <com.kyad.traystorage.app.common.font.FontButton
+            <!-- 로그??버튼 -->
+            <com.us.traystorage.app.common.font.FontButton
                 android:id="@+id/btn_login"
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="match_parent"
@@ -93,8 +94,8 @@
                 android:onClick="@{()->activity.goLogin()}"
                 android:includeFontPadding="false" />
 
-            <!-- 회원가입 버튼 -->
-            <com.kyad.traystorage.app.common.font.FontButton
+            <!-- ?�원가??버튼 -->
+            <com.us.traystorage.app.common.font.FontButton
                 android:id="@+id/btn_signup"
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="match_parent"
@@ -108,8 +109,8 @@
                 android:onClick="@{()->activity.goSignUp()}"
                 android:includeFontPadding="false" />
 
-            <!-- 또는 -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- ?�는 -->
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_notosans_kr_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

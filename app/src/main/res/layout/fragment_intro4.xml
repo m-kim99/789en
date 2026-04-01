@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- 뒤로가기 & 닫기 버튼 -->
+    <!-- ?�로가�?& ?�기 버튼 -->
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:src="@drawable/ic_close" />
     </RelativeLayout>
 
-    <!-- 진행 표시 점 (4번째 활성) -->
+    <!-- 진행 ?�시 ??(4번째 ?�성) -->
     <LinearLayout
         android:id="@+id/indicator"
         android:layout_width="wrap_content"
@@ -62,8 +62,8 @@
             android:background="@drawable/bg_indicator_active" />
     </LinearLayout>
 
-    <!-- 제목 (TrayStorage 파란색) -->
-    <com.kyad.traystorage.app.common.font.FontTextView
+    <!-- ?�목 (TrayStorage ?��??? -->
+    <com.us.traystorage.app.common.font.FontTextView
         android:id="@+id/text_title"
         style="@style/font_notosans_kr_bold"
         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
         android:gravity="center"
         android:includeFontPadding="false" />
 
-    <!-- 스마트폰 이미지 -->
+    <!-- ?�마?�폰 ?��?지 -->
     <ImageView
         android:id="@+id/img_illustration"
         android:layout_width="220dp"
@@ -89,7 +89,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/img_intro_onboarding4" />
 
-    <!-- 하단 버튼 영역 -->
+    <!-- ?�단 버튼 ?�역 -->
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
             android:layout_height="1dp"
             android:background="#EBEDF0" />
 
-        <com.kyad.traystorage.app.common.font.FontButton
+        <com.us.traystorage.app.common.font.FontButton
             android:id="@+id/btn_start"
             style="@style/font_notosans_kr_bold"
             android:layout_width="match_parent"

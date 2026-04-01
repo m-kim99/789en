@@ -6,7 +6,7 @@
 <data>
     <variable
         name="activity"
-        type="com.kyad.traystorage.app.splash.LoadingActivity" />
+        type="com.us.traystorage.app.splash.LoadingActivity" />
 </data>
     <RelativeLayout
         android:layout_width="match_parent"

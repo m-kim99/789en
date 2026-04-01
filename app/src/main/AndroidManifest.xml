@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.kyad.traystorage">
+    package="com.us.traystorage">
     <!-- required permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -208,7 +208,7 @@
             android:exported="true"
             tools:ignore="Instantiatable" />
 
-        <!-- facebook 설정 -->
+        <!-- facebook ?�정 -->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -232,7 +232,7 @@
         </activity>
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider836486066548932"
+            android:authorities="com.facebook.app.FacebookContentProvider4631666656931525"
             android:exported="true" />
 
     </application>

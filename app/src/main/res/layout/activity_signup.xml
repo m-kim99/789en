@@ -9,11 +9,11 @@
 
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.auth.SignupActivity" />
+            type="com.us.traystorage.app.auth.SignupActivity" />
 
         <variable
             name="viewModel"
-            type="com.kyad.traystorage.app.auth.SignupActivity.ViewModel" />
+            type="com.us.traystorage.app.auth.SignupActivity.ViewModel" />
 
     </data>
 
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="45dp">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:id="@+id/text_intro"
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                         android:textColor="#111111"
                         android:textSize="22sp" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:id="@+id/current_num"
                         style="@style/font_spoqahansansneo_regular"
                         android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
                         android:textSize="14dp"
                         android:visibility="gone" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:id="@+id/all_num"
                         style="@style/font_spoqahansansneo_regular"
                         android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
                         android:layout_marginBottom="35dp"
                         android:orientation="vertical">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.kyad.traystorage.app.common.font.FontEditText
+                            <com.us.traystorage.app.common.font.FontEditText
                                 android:id="@+id/edit_id"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="match_parent"
@@ -173,7 +173,7 @@
                                 android:layout_toStartOf="@+id/button_double_check"
                                 android:layout_toLeftOf="@+id/button_double_check"/>
 
-                            <com.kyad.traystorage.app.common.font.FontButton
+                            <com.us.traystorage.app.common.font.FontButton
                                 android:id="@+id/button_double_check"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="wrap_content"
@@ -203,7 +203,7 @@
                         android:layout_marginBottom="35dp"
                         android:orientation="vertical">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.kyad.traystorage.app.common.font.FontEditText
+                            <com.us.traystorage.app.common.font.FontEditText
                                 android:id="@+id/edit_password"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="match_parent"
@@ -247,7 +247,7 @@
                         android:layout_marginBottom="35dp"
                         android:orientation="vertical">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -260,7 +260,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.kyad.traystorage.app.common.font.FontEditText
+                            <com.us.traystorage.app.common.font.FontEditText
                                 android:id="@+id/edit_password2"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="match_parent"
@@ -299,7 +299,7 @@
                         android:layout_marginBottom="35dp"
                         android:orientation="vertical">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.kyad.traystorage.app.common.font.FontEditText
+                            <com.us.traystorage.app.common.font.FontEditText
                                 android:id="@+id/edit_phonenumber"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="match_parent"
@@ -338,7 +338,7 @@
                                 android:onClick="@{()->activity.onDeletetext()}"
                                 android:src="@drawable/icon_common_24x24_close" />
 
-                            <com.kyad.traystorage.app.common.font.FontButton
+                            <com.us.traystorage.app.common.font.FontButton
                                 android:id="@+id/button_req"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="wrap_content"
@@ -367,7 +367,7 @@
                         android:layout_marginBottom="15dp"
                         android:orientation="vertical">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -380,7 +380,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.kyad.traystorage.app.common.font.FontEditText
+                            <com.us.traystorage.app.common.font.FontEditText
                                 android:id="@+id/edit_certnumber"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="match_parent"
@@ -395,7 +395,7 @@
                                 android:textColor="#111111"
                                 android:textSize="18sp" />
 
-                            <com.kyad.traystorage.app.common.font.FontButton
+                            <com.us.traystorage.app.common.font.FontButton
                                 android:id="@+id/button_cert_confirm"
                                 style="@style/font_notosans_kr_regular"
                                 android:layout_width="wrap_content"
@@ -423,7 +423,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             android:id="@+id/resend_button2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -441,7 +441,7 @@
                             android:layout_toRightOf="@id/resend_button2"
                             android:background="@color/light_gray" />
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             android:id="@+id/text_time"
                             style="@style/font_spoqahansansneo_regular"
                             android:layout_width="wrap_content"
@@ -476,7 +476,7 @@
                             android:src="@drawable/bg_checkbox"
                             app:isSelect="@{activity.isAllChecked}" />
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -503,7 +503,7 @@
 
         </ScrollView>
 
-        <!-- 하단 Dock -->
+        <!-- ?�단 Dock -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -517,7 +517,7 @@
                 android:layout_marginBottom="12dp"
                 android:background="#EBEDF0" />
 
-            <com.kyad.traystorage.app.common.font.FontButton
+            <com.us.traystorage.app.common.font.FontButton
                 android:id="@+id/next_btn"
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="match_parent"

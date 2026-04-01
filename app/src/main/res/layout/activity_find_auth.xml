@@ -5,10 +5,10 @@
         <import type="android.view.View" />
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.auth.FindAuthActivity" />
+            type="com.us.traystorage.app.auth.FindAuthActivity" />
         <variable
             name="viewModel"
-            type="com.kyad.traystorage.app.auth.FindAuthActivity.ViewModel" />
+            type="com.us.traystorage.app.auth.FindAuthActivity.ViewModel" />
     </data>
 
     <LinearLayout
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp">
 
-            <!-- 뒤로가기 (일반 모드) -->
+            <!-- ?�로가�?(?�반 모드) -->
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -41,8 +41,8 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{activity.showPhoneTitle ? View.GONE : View.VISIBLE}" />
 
-            <!-- 휴대폰 인증 타이틀 (회원가입 모드) -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- ?��????�증 ?�?��? (?�원가??모드) -->
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_notosans_kr_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                 android:textSize="18sp"
                 android:visibility="@{activity.showPhoneTitle ? View.VISIBLE : View.GONE}" />
 
-            <!-- 닫기 버튼 (회원가입 모드) -->
+            <!-- ?�기 버튼 (?�원가??모드) -->
             <ImageView
                 android:id="@+id/ib_close"
                 android:layout_width="24dp"
@@ -79,8 +79,8 @@
                 android:orientation="vertical"
                 android:paddingHorizontal="24dp">
 
-                <!-- 타이틀 -->
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <!-- ?�?��? -->
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/text_intro"
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                     android:lineHeight="32sp"
                     android:includeFontPadding="false" />
 
-                <!-- 아이디 입력 (비밀번호 찾기 모드) -->
+                <!-- ?�이???�력 (비�?번호 찾기 모드) -->
                 <LinearLayout
                     android:id="@+id/layout_id"
                     android:layout_width="match_parent"
@@ -102,7 +102,7 @@
                     android:orientation="vertical"
                     android:visibility="@{activity.hasUserId?View.GONE:View.VISIBLE}">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                         android:textSize="14sp"
                         android:includeFontPadding="false" />
 
-                    <com.kyad.traystorage.app.common.font.FontEditText
+                    <com.us.traystorage.app.common.font.FontEditText
                         android:id="@+id/edit_id"
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="match_parent"
@@ -131,14 +131,14 @@
                         android:background="#D6D7DC" />
                 </LinearLayout>
 
-                <!-- 휴대폰 번호 입력 -->
+                <!-- ?��???번호 ?�력 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp">
 
-                        <com.kyad.traystorage.app.common.font.FontEditText
+                        <com.us.traystorage.app.common.font.FontEditText
                             android:id="@+id/edit_phonenumber"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="match_parent"
@@ -179,7 +179,7 @@
                             android:onClick="@{()->activity.onDeletetext()}"
                             android:background="?attr/selectableItemBackgroundBorderless" />
 
-                        <com.kyad.traystorage.app.common.font.FontButton
+                        <com.us.traystorage.app.common.font.FontButton
                             android:id="@+id/button_req"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
@@ -202,14 +202,14 @@
                         android:background="#D6D7DC" />
                 </LinearLayout>
 
-                <!-- 인증번호 입력 -->
+                <!-- ?�증번호 ?�력 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -222,7 +222,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp">
 
-                        <com.kyad.traystorage.app.common.font.FontEditText
+                        <com.us.traystorage.app.common.font.FontEditText
                             android:id="@+id/edit_certnumber"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="match_parent"
@@ -236,7 +236,7 @@
                             android:text="@={viewModel.certNumber}"
                             android:includeFontPadding="false" />
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             android:id="@+id/text_time"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
@@ -256,14 +256,14 @@
                         android:background="#D6D7DC" />
                 </LinearLayout>
 
-                <!-- 인증번호 재전송 -->
+                <!-- ?�증번호 ?�전??-->
                 <RelativeLayout
                     android:id="@+id/resend_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:id="@+id/resend_button2"
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
@@ -283,8 +283,8 @@
                         android:background="#D6D7DC" />
                 </RelativeLayout>
 
-                <!-- 확인 버튼 -->
-                <com.kyad.traystorage.app.common.font.FontButton
+                <!-- ?�인 버튼 -->
+                <com.us.traystorage.app.common.font.FontButton
                     android:id="@+id/next_btn"
                     style="@style/font_notosans_kr_bold"
                     android:layout_width="match_parent"

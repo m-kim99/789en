@@ -5,7 +5,7 @@
         <import type="android.view.View" />
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.auth.SigninActivity" />
+            type="com.us.traystorage.app.auth.SigninActivity" />
     </data>
 
     <LinearLayout
@@ -66,7 +66,7 @@
                         android:src="@drawable/view" />
 
                     <!-- 문구 -->
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -78,8 +78,8 @@
                         android:includeFontPadding="false" />
                 </LinearLayout>
 
-                <!-- 아이디 입력 -->
-                <com.kyad.traystorage.app.common.font.FontEditText
+                <!-- ?�이???�력 -->
+                <com.us.traystorage.app.common.font.FontEditText
                     android:id="@+id/text_id"
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="match_parent"
@@ -95,14 +95,14 @@
                     android:inputType="text"
                     android:includeFontPadding="false" />
 
-                <!-- 비밀번호 입력 -->
+                <!-- 비�?번호 ?�력 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="4dp"
                     android:background="@drawable/bg_input_border">
 
-                    <com.kyad.traystorage.app.common.font.FontEditText
+                    <com.us.traystorage.app.common.font.FontEditText
                         android:id="@+id/text_password"
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                         android:inputType="textPassword"
                         android:includeFontPadding="false" />
 
-                    <!-- 비밀번호 표시/숨김 아이콘 -->
+                    <!-- 비�?번호 ?�시/?��? ?�이�?-->
                     <ImageView
                         android:id="@+id/btn_show_pwd"
                         android:layout_width="24dp"
@@ -129,7 +129,7 @@
                         android:background="?attr/selectableItemBackgroundBorderless" />
                 </RelativeLayout>
 
-                <!-- 자동로그인 / 아이디찾기 / 비밀번호찾기 -->
+                <!-- ?�동로그??/ ?�이?�찾�?/ 비�?번호찾기 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
 
-                    <!-- 자동로그인 -->
+                    <!-- ?�동로그??-->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
                             android:layout_height="24dp"
                             android:src="@drawable/ic_check_off" />
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -164,14 +164,14 @@
                             android:includeFontPadding="false" />
                     </LinearLayout>
 
-                    <!-- 아이디찾기 / 비밀번호찾기 -->
+                    <!-- ?�이?�찾�?/ 비�?번호찾기 -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="end|center_vertical">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                             android:layout_marginHorizontal="8dp"
                             android:background="#D6D7DC" />
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -201,8 +201,8 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- 로그인 버튼 -->
-                <com.kyad.traystorage.app.common.font.FontButton
+                <!-- 로그??버튼 -->
+                <com.us.traystorage.app.common.font.FontButton
                     android:id="@+id/btn_login"
                     style="@style/font_notosans_kr_bold"
                     android:layout_width="match_parent"

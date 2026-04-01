@@ -6,13 +6,13 @@
         <import type="android.view.View" />
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.setting.FaqActivity.CategoryListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.setting.FaqActivity.CategoryListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.data.model.ModelFaqItem" />
+            type="com.us.traystorage.data.model.ModelFaqItem" />
 
     </data>
-    <com.kyad.traystorage.app.common.font.FontTextView
+    <com.us.traystorage.app.common.font.FontTextView
         style="@style/font_spoqahansansneo_regular"
         android:layout_width="wrap_content"
         android:layout_height="40dp"

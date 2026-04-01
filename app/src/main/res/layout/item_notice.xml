@@ -7,10 +7,10 @@
         <import type="android.view.View" />
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.setting.NoticeActivity.ListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.setting.NoticeActivity.ListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.data.model.ModelNotice" />
+            type="com.us.traystorage.data.model.ModelNotice" />
 
     </data>
 
@@ -35,7 +35,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                     android:textColor="#111111"
                     android:textSize="16sp" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

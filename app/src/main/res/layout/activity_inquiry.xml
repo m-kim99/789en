@@ -9,7 +9,7 @@
 
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.setting.InquiryActivity" />
+            type="com.us.traystorage.app.setting.InquiryActivity" />
 
     </data>
 
@@ -35,7 +35,7 @@
                 android:padding="12dp"
                 android:src="@drawable/ic_back" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                     android:paddingStart="10dp"
                     android:src="@drawable/icon_c_write_white_24" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/count_text"
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/img_nodocuments_150" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
 
             </LinearLayout>
 
-            <com.kyad.traystorage.app.common.font.FontButton
+            <com.us.traystorage.app.common.font.FontButton
                 android:id="@+id/btn_add"
                 style="@style/font_spoqahansansneo_bold"
                 android:layout_width="match_parent"

@@ -7,7 +7,7 @@
 
         <variable
             name="dialog"
-            type="com.kyad.traystorage.app.common.dialog.LoadingDialog" />
+            type="com.us.traystorage.app.common.dialog.LoadingDialog" />
     </data>
 
     <RelativeLayout

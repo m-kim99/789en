@@ -7,10 +7,10 @@
         <import type="android.view.View" />
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.setting.FaqActivity.ListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.setting.FaqActivity.ListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.data.model.ModelFaq" />
+            type="com.us.traystorage.data.model.ModelFaq" />
 
     </data>
 
@@ -34,7 +34,7 @@
                 android:onClick="@{()->holder.onExpand()}"
                 android:orientation="horizontal">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
                     android:textColor="#1E319D"
                     android:textSize="16sp" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/title_normal"
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="0dp"
@@ -72,7 +72,7 @@
                 android:padding="16dp"
                 android:visibility="@{data.isExpanded ? View.VISIBLE : View.GONE}">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                     android:textColor="#1E319D"
                     android:textSize="16sp" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/txt_content"
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="match_parent"

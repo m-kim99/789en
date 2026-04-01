@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdk 35
 //    buildToolsVersion '29.0.2'
-    namespace "com.kyad.traystorage"
+    namespace "com.us.traystorage"
 
     defaultConfig {
-        applicationId "com.us.traystorage"
+//        applicationId "com.us.traystorage"
         minSdk 21
         targetSdk 35
         multiDexEnabled true

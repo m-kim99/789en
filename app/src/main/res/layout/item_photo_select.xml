@@ -7,10 +7,10 @@
         <import type="android.view.View"/>
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.common.PhotoSelectActivity.ImageListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.common.PhotoSelectActivity.ImageListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.app.common.PhotoSelectActivity.PhotoSelectModel" />
+            type="com.us.traystorage.app.common.PhotoSelectActivity.PhotoSelectModel" />
 
     </data>
 
@@ -44,7 +44,7 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/logo_symbol_60" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_regular"
                 android:layout_width="26dp"
                 android:layout_height="26dp"

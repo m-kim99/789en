@@ -4,10 +4,10 @@
     <data>
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.main.DocumentEditActivity.LabelColorListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.main.DocumentEditActivity.LabelColorListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.app.main.DocumentEditActivity.LabelColorModel" />
+            type="com.us.traystorage.app.main.DocumentEditActivity.LabelColorModel" />
 
     </data>
     <RelativeLayout

@@ -1,0 +1,14 @@
+package com.us.traystorage.data.remote;
+
+import com.us.traystorage.data.RemoteDataSource;
+import retrofit2.Retrofit;
+
+public class RemoteDataSourceFactory {
+	public static RemoteDataSource getInstance() {
+//		if (true) { // for test
+//			return new DummyDataSourceHelper();
+//		}
+		final Retrofit retrofit = RemoteDataSourceHelper.createRetrofit(RemoteDataSource.API_BASE_URL);
+		return retrofit.create(RemoteDataSource.class);
+	}
+}

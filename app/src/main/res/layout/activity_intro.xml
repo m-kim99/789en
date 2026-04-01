@@ -9,7 +9,7 @@
 
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.splash.IntroActivity" />
+            type="com.us.traystorage.app.splash.IntroActivity" />
 
     </data>
 
@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <!-- skip 버튼 제거 (각 화면에 닫기 버튼 있음) -->
+        <!-- skip 버튼 ?�거 (�??�면???�기 버튼 ?�음) -->
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"

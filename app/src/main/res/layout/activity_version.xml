@@ -7,11 +7,11 @@
 
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.setting.VersionActivity" />
+            type="com.us.traystorage.app.setting.VersionActivity" />
 
         <variable
             name="model"
-            type="com.kyad.traystorage.app.setting.VersionActivity.ViewModel" />
+            type="com.us.traystorage.app.setting.VersionActivity.ViewModel" />
     </data>
 
     <LinearLayout
@@ -36,7 +36,7 @@
                 android:padding="12dp"
                 android:src="@drawable/ic_back" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,8 +59,8 @@
             android:orientation="vertical"
             android:paddingHorizontal="24dp">
 
-            <!-- 업데이트 필요 시 상단 문구 -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- ?�데?�트 ?�요 ???�단 문구 -->
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,8 +73,8 @@
                 android:textSize="22sp"
                 android:visibility="@{model.isUpdate?View.VISIBLE:View.GONE}" />
 
-            <!-- 최신 버전일 때 상단 문구 -->
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <!-- 최신 버전?????�단 문구 -->
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                 android:textSize="22sp"
                 android:visibility="@{model.isUpdate?View.GONE:View.VISIBLE}" />
 
-            <!-- 로고 이미지 -->
+            <!-- 로고 ?��?지 -->
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -96,7 +96,7 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/version_logo" />
 
-            <!-- 버전 정보 영역 -->
+            <!-- 버전 ?�보 ?�역 -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,13 +105,13 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
 
-                <!-- 현재 버전 -->
+                <!-- ?�재 버전 -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_spoqahansansneo_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                         android:textColor="#111111"
                         android:textSize="15sp" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:id="@+id/label_currentversion"
                         style="@style/font_spoqahansansneo_bold"
                         android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                         android:textSize="15sp" />
                 </LinearLayout>
 
-                <!-- 최신 버전 (업데이트 필요 시에만 표시) -->
+                <!-- 최신 버전 (?�데?�트 ?�요 ?�에�??�시) -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                     android:orientation="horizontal"
                     android:visibility="@{model.isUpdate?View.VISIBLE:View.GONE}">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_spoqahansansneo_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
                         android:textColor="@color/focus_color"
                         android:textSize="15sp" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         android:id="@+id/label_newestversion"
                         style="@style/font_spoqahansansneo_bold"
                         android:layout_width="wrap_content"
@@ -168,7 +168,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <com.kyad.traystorage.app.common.font.FontButton
+            <com.us.traystorage.app.common.font.FontButton
                 android:id="@+id/next_btn"
                 style="@style/font_spoqahansansneo_bold"
                 android:layout_width="match_parent"

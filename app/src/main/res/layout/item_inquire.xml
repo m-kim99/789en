@@ -7,10 +7,10 @@
         <import type="android.view.View" />
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.setting.InquiryActivity.ListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.setting.InquiryActivity.ListAdapter.ListItemViewHolder" />
         <variable
             name="data"
-            type="com.kyad.traystorage.data.model.ModelAsk" />
+            type="com.us.traystorage.data.model.ModelAsk" />
 
     </data>
 
@@ -33,7 +33,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                     android:textColor="@drawable/bg_label_reply_text"
                     android:textSize="14sp" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
 
             </LinearLayout>
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_spoqahansansneo_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
                         android:textColor="#535455"
                         android:textSize="14sp" />
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_spoqahansansneo_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
 
                 </LinearLayout>
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

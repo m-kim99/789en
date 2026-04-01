@@ -8,11 +8,11 @@
 
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.auth.SignupProfileActivity" />
+            type="com.us.traystorage.app.auth.SignupProfileActivity" />
 
         <variable
             name="viewModel"
-            type="com.kyad.traystorage.app.auth.SignupProfileActivity.ViewModel" />
+            type="com.us.traystorage.app.auth.SignupProfileActivity.ViewModel" />
     </data>
 
     <LinearLayout
@@ -49,7 +49,7 @@
                     android:layout_gravity="center"
                     android:src="@drawable/img_joinmembership_150" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/text_intro"
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                     android:textSize="22sp"
                     android:includeFontPadding="false" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/text_intro2"
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
                     android:layout_marginBottom="35dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                         android:textSize="14sp"
                         android:includeFontPadding="false" />
 
-                    <com.kyad.traystorage.app.common.font.FontEditText
+                    <com.us.traystorage.app.common.font.FontEditText
                         android:id="@+id/edit_name"
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="match_parent"
@@ -130,7 +130,7 @@
                     android:layout_marginBottom="35dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
                         android:clickable="true"
                         android:onClick="@{()->activity.onClickBirthDay()}">
 
-                        <com.kyad.traystorage.app.common.font.FontTextView
+                        <com.us.traystorage.app.common.font.FontTextView
                             android:id="@+id/edit_birthday"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="match_parent"
@@ -182,7 +182,7 @@
                     android:layout_marginHorizontal="18dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -198,7 +198,7 @@
                         android:orientation="horizontal"
                         android:paddingBottom="35dp">
 
-                        <com.kyad.traystorage.app.common.font.FontButton
+                        <com.us.traystorage.app.common.font.FontButton
                             android:id="@+id/button_sex1"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
@@ -214,7 +214,7 @@
                             android:includeFontPadding="false"
                             app:isSelect="@{true}" />
 
-                        <com.kyad.traystorage.app.common.font.FontButton
+                        <com.us.traystorage.app.common.font.FontButton
                             android:id="@+id/button_sex2"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="wrap_content"
@@ -240,7 +240,7 @@
                     android:layout_marginBottom="30dp"
                     android:orientation="vertical">
 
-                    <com.kyad.traystorage.app.common.font.FontTextView
+                    <com.us.traystorage.app.common.font.FontTextView
                         style="@style/font_notosans_kr_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.kyad.traystorage.app.common.font.FontEditText
+                        <com.us.traystorage.app.common.font.FontEditText
                             android:id="@+id/edit_email"
                             style="@style/font_notosans_kr_regular"
                             android:layout_width="match_parent"
@@ -287,7 +287,7 @@
                         android:background="#D6D7DC" />
                 </LinearLayout>
 
-                <com.kyad.traystorage.app.common.font.FontButton
+                <com.us.traystorage.app.common.font.FontButton
                     android:id="@+id/next_btn"
                     style="@style/font_notosans_kr_bold"
                     android:layout_width="match_parent"

@@ -8,10 +8,10 @@
         <import type="android.view.View" />
         <variable
             name="activity"
-            type="com.kyad.traystorage.app.setting.ContactusActivity" />
+            type="com.us.traystorage.app.setting.ContactusActivity" />
         <variable
             name="model"
-            type="com.kyad.traystorage.app.setting.ContactusActivity.ViewModel" />
+            type="com.us.traystorage.app.setting.ContactusActivity.ViewModel" />
     </data>
 
     <LinearLayout
@@ -37,7 +37,7 @@
                 android:padding="12dp"
                 android:src="@drawable/ic_back" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 style="@style/font_spoqahansansneo_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                     android:textColor="#535455"
                     android:textSize="14sp" />
 
-                <com.kyad.traystorage.app.common.font.FontEditText
+                <com.us.traystorage.app.common.font.FontEditText
                     android:id="@+id/text_subject"
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                     android:layout_height="1dp"
                     android:background="#D6D7DC" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                     android:textColor="#535455"
                     android:textSize="14sp" />
 
-                <com.kyad.traystorage.app.common.font.FontEditText
+                <com.us.traystorage.app.common.font.FontEditText
                     android:id="@+id/text_content"
                     style="@style/font_spoqahansansneo_regular"
                     android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                     android:layout_height="1dp"
                     android:background="#D6D7DC" />
 
-                <com.kyad.traystorage.app.common.font.FontButton
+                <com.us.traystorage.app.common.font.FontButton
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"

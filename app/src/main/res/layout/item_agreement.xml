@@ -8,11 +8,11 @@
 
         <variable
             name="data"
-            type="com.kyad.traystorage.data.model.ModelAgreement" />
+            type="com.us.traystorage.data.model.ModelAgreement" />
 
         <variable
             name="holder"
-            type="com.kyad.traystorage.app.auth.SignupActivity.ListAdapter.ListItemViewHolder" />
+            type="com.us.traystorage.app.auth.SignupActivity.ListAdapter.ListItemViewHolder" />
     </data>
 
     <RelativeLayout
@@ -37,7 +37,7 @@
                 android:src="@drawable/bg_checkbox2"
                 app:isSelect="@{data.isChecked}" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 android:id="@+id/term_text1"
                 style="@style/font_notosans_kr_regular"
                 android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
                 android:textColor="#111111"
                 android:textSize="16sp" />
 
-            <com.kyad.traystorage.app.common.font.FontTextView
+            <com.us.traystorage.app.common.font.FontTextView
                 android:id="@+id/term_text2"
                 style="@style/font_notosans_kr_regular"
                 android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <com.kyad.traystorage.app.common.font.FontTextView
+        <com.us.traystorage.app.common.font.FontTextView
             android:id="@+id/view_link"
             style="@style/font_notosans_kr_regular"
             android:layout_width="wrap_content"

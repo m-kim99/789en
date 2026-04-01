@@ -3,5 +3,5 @@
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:background="#FFFFFF">
-    <!-- 간단한 nav bar placeholder -->
+    <!-- 간단??nav bar placeholder -->
 </RelativeLayout>

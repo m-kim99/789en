@@ -6,7 +6,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.kyad.common.R;
+import com.us.common.R;
 
 @SuppressLint("AppCompatCustomView")
 public class AspectRatioImageView extends ImageView {

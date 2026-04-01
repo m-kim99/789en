@@ -5,7 +5,7 @@
         <import type="android.view.View" />
         <variable
             name="dialog"
-            type="com.kyad.traystorage.app.common.dialog.AlertDialog" />
+            type="com.us.traystorage.app.common.dialog.AlertDialog" />
     </data>
 
     <RelativeLayout
@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:background="#99111111" />
 
-        <!-- 다이얼로그 -->
+        <!-- ?�이?�로�?-->
         <LinearLayout
             android:layout_width="312dp"
             android:layout_height="wrap_content"
@@ -28,15 +28,15 @@
             android:paddingHorizontal="24dp"
             android:paddingVertical="16dp">
 
-            <!-- 내용 영역 -->
+            <!-- ?�용 ?�역 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingVertical="16dp">
 
-                <!-- 제목 (조건부 표시) -->
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <!-- ?�목 (조건부 ?�시) -->
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/title"
                     style="@style/font_notosans_kr_bold"
                     android:layout_width="wrap_content"
@@ -47,8 +47,8 @@
                     android:lineHeight="24sp"
                     android:includeFontPadding="false" />
 
-                <!-- 내용 (조건부 표시) -->
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <!-- ?�용 (조건부 ?�시) -->
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/message"
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
                     android:includeFontPadding="false" />
             </LinearLayout>
 
-            <!-- 버튼 영역 -->
+            <!-- 버튼 ?�역 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -69,8 +69,8 @@
                 android:gravity="end"
                 android:paddingStart="24dp">
 
-                <!-- 취소 버튼 (조건부 표시) -->
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <!-- 취소 버튼 (조건부 ?�시) -->
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/btn_cancel"
                     style="@style/font_notosans_kr_regular"
                     android:layout_width="wrap_content"
@@ -86,8 +86,8 @@
                     android:onClick="@{()->dialog.onClickCancel()}"
                     android:includeFontPadding="false" />
 
-                <!-- 확인 버튼 -->
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <!-- ?�인 버튼 -->
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/btn_confirm"
                     style="@style/font_notosans_kr_bold"
                     android:layout_width="wrap_content"

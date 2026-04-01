@@ -87,10 +87,10 @@
     <string name="to_approve">Allow</string>
     <string name="contact">Contacts</string>
     <string name="option">Contact-based friend invitation service</string>
-    <string name="permission_desc1">∙If you do not set the required permissions, app usage will be restricted.</string>
+    <string name="permission_desc1">If you do not set the required permissions, app usage will be restricted.</string>
     <string name="permission_desc2">(For Android Marshmallow 6.0 and above users)</string>
     <string name="intro_1_1">Mountains of documents</string>
-    <string name="intro_1_2">piling up every day —</string>
+    <string name="intro_1_2">piling up every day 📄</string>
     <string name="intro_1_3">how do you organize them?</string>
     <string name="intro_2_1">Store and manage</string>
     <string name="intro_2_2">complex documents more easily!</string>
@@ -153,7 +153,7 @@
     <string name="withdrawal_btn">Request Account Withdrawal</string>
     <string name="enter_id_email">ID or Email</string>
     <string name="double_chceck">Check Duplicate</string>
-    <string name="password_hint">6–20 characters with letters and numbers</string>
+    <string name="password_hint">6~20 characters with letters and numbers</string>
     <string name="password_confirm">Confirm Password</string>
     <string name="next">Next</string>
     <string name="all_agree">Agree to All</string>

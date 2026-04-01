@@ -9,7 +9,7 @@
 
         <variable
             name="presenter"
-            type="com.kyad.traystorage.app.common.dialog.DatePickerDialog.Presenter" />
+            type="com.us.traystorage.app.common.dialog.DatePickerDialog.Presenter" />
 
     </data>
 
@@ -33,7 +33,7 @@
                 android:layout_height="55dp"
                 android:background="@drawable/shape_dialog_top_round">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     android:id="@+id/title"
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="match_parent"
@@ -152,7 +152,7 @@
                 android:background="@color/white"
                 android:orientation="horizontal">
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -169,7 +169,7 @@
                     android:layout_marginVertical="10dp"
                     android:background="#808080" />
 
-                <com.kyad.traystorage.app.common.font.FontTextView
+                <com.us.traystorage.app.common.font.FontTextView
                     style="@style/font_spoqahansansneo_bold"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
